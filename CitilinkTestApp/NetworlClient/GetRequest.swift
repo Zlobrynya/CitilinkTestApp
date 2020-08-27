@@ -43,13 +43,13 @@ class GetRequest {
         parameters: T,
         jsonEncoder: JSONEncoder = JSONEncoder(),
         urlSession: URLSession = URLSession.shared,
-        resultHandler _: NetworkRequestResultHandler?,
-        constants _: NetworkConstantsProtocol
+        resultHandler: NetworkRequestResultHandler?
     ) {
         session = urlSession
         guard var components = URLComponents(string: url) else { return }
         components.queryItems = try! parameters.asURLQueryItem(jsonEncoder: jsonEncoder)
         urlRequest = URLRequest(url: components.url!)
+        self.resultHandler = resultHandler
     }
 
     // MARK: - Public Functions

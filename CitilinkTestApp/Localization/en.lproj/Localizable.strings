@@ -1,0 +1,23 @@
+/* 
+  Localization.strings
+  CitilinkTestApp
+
+  Created by Nikitin Nikita on 27.08.2020.
+  Copyright © 2020 Nikita Nikitin. All rights reserved.
+*/
+
+// MARK: - Input Data View
+
+"lastName" = "Last name";
+"firstName" = "First Name";
+"secondaryName" = "Secondary Name";
+"lastNamePlaceholder" = "Enter your last-name";
+"firstNamePlaceholder" = "Enter your first-name";
+"secondaryNamePlaceholder" = "Enter your secondary-name";
+"lastNameError" = "Invalid last-name";
+"firstNameError" = "Invalid first-name";
+"secondaryNameError" = "Invalid secondary-name";
+
+"birthdate" = "Birthdate";
+"birthdatePlaceholder" = "Select birthdate";
+"selectBirthdate" = "Select birthdate";
