@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */; };
+		524CE76724F7E49C00BC0DB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */; };
+		524CE76924F7E49C00BC0DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76824F7E49C00BC0DB1 /* ContentView.swift */; };
+		524CE76B24F7E4A000BC0DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */; };
+		524CE76E24F7E4A000BC0DB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76D24F7E4A000BC0DB1 /* Preview Assets.xcassets */; };
+		524CE77124F7E4A000BC0DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76F24F7E4A000BC0DB1 /* LaunchScreen.storyboard */; };
+		524CE77C24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE77B24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift */; };
+		524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78824F7E9CA00BC0DB1 /* Debtor.swift */; };
+		524CE78B24F7EBEF00BC0DB1 /* MainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */; };
+		524CE78D24F7EC0900BC0DB1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78C24F7EC0900BC0DB1 /* Response.swift */; };
+		524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79024F7ED5500BC0DB1 /* HTTPStatusCode.swift */; };
+		524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79324F7EDF400BC0DB1 /* GetRequest.swift */; };
+		524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */; };
+		524CE79B24F7EFCA00BC0DB1 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79A24F7EFCA00BC0DB1 /* URLSession.swift */; };
+		524CE79D24F7F19400BC0DB1 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */; };
+		524CE79F24F7F59A00BC0DB1 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79E24F7F59A00BC0DB1 /* Encodable.swift */; };
+		524CE7A224F7F62B00BC0DB1 /* DataParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE7A124F7F62B00BC0DB1 /* DataParams.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		524CE77824F7E4A000BC0DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 524CE75924F7E49C00BC0DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 524CE76024F7E49C00BC0DB1;
+			remoteInfo = CitilinkTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		524CE76124F7E49C00BC0DB1 /* CitilinkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitilinkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		524CE76824F7E49C00BC0DB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		524CE76D24F7E4A000BC0DB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		524CE77024F7E4A000BC0DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		524CE77224F7E4A000BC0DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524CE77724F7E4A000BC0DB1 /* CitilinkTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitilinkTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		524CE77B24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitilinkTestAppTests.swift; sourceTree = "<group>"; };
+		524CE77D24F7E4A000BC0DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524CE78824F7E9CA00BC0DB1 /* Debtor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtor.swift; sourceTree = "<group>"; };
+		524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponse.swift; sourceTree = "<group>"; };
+		524CE78C24F7EC0900BC0DB1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		524CE79024F7ED5500BC0DB1 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		524CE79324F7EDF400BC0DB1 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
+		524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		524CE79A24F7EFCA00BC0DB1 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		524CE79E24F7F59A00BC0DB1 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		524CE7A124F7F62B00BC0DB1 /* DataParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParams.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		524CE75E24F7E49C00BC0DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524CE77424F7E4A000BC0DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		524CE75824F7E49C00BC0DB1 = {
+			isa = PBXGroup;
+			children = (
+				524CE76324F7E49C00BC0DB1 /* CitilinkTestApp */,
+				524CE77A24F7E4A000BC0DB1 /* CitilinkTestAppTests */,
+				524CE76224F7E49C00BC0DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		524CE76224F7E49C00BC0DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				524CE76124F7E49C00BC0DB1 /* CitilinkTestApp.app */,
+				524CE77724F7E4A000BC0DB1 /* CitilinkTestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		524CE76324F7E49C00BC0DB1 /* CitilinkTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				524CE79924F7EFBA00BC0DB1 /* Extension */,
+				524CE79224F7ED9300BC0DB1 /* Enum */,
+				524CE78E24F7ECB800BC0DB1 /* NetworlClient */,
+				524CE78724F7E97B00BC0DB1 /* Models */,
+				524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */,
+				524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */,
+				524CE76824F7E49C00BC0DB1 /* ContentView.swift */,
+				524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */,
+				524CE76F24F7E4A000BC0DB1 /* LaunchScreen.storyboard */,
+				524CE77224F7E4A000BC0DB1 /* Info.plist */,
+				524CE76C24F7E4A000BC0DB1 /* Preview Content */,
+			);
+			path = CitilinkTestApp;
+			sourceTree = "<group>";
+		};
+		524CE76C24F7E4A000BC0DB1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				524CE76D24F7E4A000BC0DB1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		524CE77A24F7E4A000BC0DB1 /* CitilinkTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				524CE77B24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift */,
+				524CE77D24F7E4A000BC0DB1 /* Info.plist */,
+			);
+			path = CitilinkTestAppTests;
+			sourceTree = "<group>";
+		};
+		524CE78724F7E97B00BC0DB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				524CE7A124F7F62B00BC0DB1 /* DataParams.swift */,
+				524CE78824F7E9CA00BC0DB1 /* Debtor.swift */,
+				524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */,
+				524CE78C24F7EC0900BC0DB1 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		524CE78E24F7ECB800BC0DB1 /* NetworlClient */ = {
+			isa = PBXGroup;
+			children = (
+				524CE79324F7EDF400BC0DB1 /* GetRequest.swift */,
+				524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */,
+				524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */,
+			);
+			path = NetworlClient;
+			sourceTree = "<group>";
+		};
+		524CE79224F7ED9300BC0DB1 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				524CE79024F7ED5500BC0DB1 /* HTTPStatusCode.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		524CE79924F7EFBA00BC0DB1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				524CE79A24F7EFCA00BC0DB1 /* URLSession.swift */,
+				524CE79E24F7F59A00BC0DB1 /* Encodable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		524CE76024F7E49C00BC0DB1 /* CitilinkTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524CE78024F7E4A000BC0DB1 /* Build configuration list for PBXNativeTarget "CitilinkTestApp" */;
+			buildPhases = (
+				524CE75D24F7E49C00BC0DB1 /* Sources */,
+				524CE75E24F7E49C00BC0DB1 /* Frameworks */,
+				524CE75F24F7E49C00BC0DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CitilinkTestApp;
+			productName = CitilinkTestApp;
+			productReference = 524CE76124F7E49C00BC0DB1 /* CitilinkTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		524CE77624F7E4A000BC0DB1 /* CitilinkTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524CE78324F7E4A000BC0DB1 /* Build configuration list for PBXNativeTarget "CitilinkTestAppTests" */;
+			buildPhases = (
+				524CE77324F7E4A000BC0DB1 /* Sources */,
+				524CE77424F7E4A000BC0DB1 /* Frameworks */,
+				524CE77524F7E4A000BC0DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524CE77924F7E4A000BC0DB1 /* PBXTargetDependency */,
+			);
+			name = CitilinkTestAppTests;
+			productName = CitilinkTestAppTests;
+			productReference = 524CE77724F7E4A000BC0DB1 /* CitilinkTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		524CE75924F7E49C00BC0DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Nikita Nikitin";
+				TargetAttributes = {
+					524CE76024F7E49C00BC0DB1 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					524CE77624F7E4A000BC0DB1 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 524CE76024F7E49C00BC0DB1;
+					};
+				};
+			};
+			buildConfigurationList = 524CE75C24F7E49C00BC0DB1 /* Build configuration list for PBXProject "CitilinkTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 524CE75824F7E49C00BC0DB1;
+			productRefGroup = 524CE76224F7E49C00BC0DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				524CE76024F7E49C00BC0DB1 /* CitilinkTestApp */,
+				524CE77624F7E4A000BC0DB1 /* CitilinkTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		524CE75F24F7E49C00BC0DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524CE77124F7E4A000BC0DB1 /* LaunchScreen.storyboard in Resources */,
+				524CE76E24F7E4A000BC0DB1 /* Preview Assets.xcassets in Resources */,
+				524CE76B24F7E4A000BC0DB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524CE77524F7E4A000BC0DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		524CE75D24F7E49C00BC0DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */,
+				524CE76724F7E49C00BC0DB1 /* SceneDelegate.swift in Sources */,
+				524CE79D24F7F19400BC0DB1 /* NetworkConstants.swift in Sources */,
+				524CE79B24F7EFCA00BC0DB1 /* URLSession.swift in Sources */,
+				524CE76924F7E49C00BC0DB1 /* ContentView.swift in Sources */,
+				524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */,
+				524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */,
+				524CE79F24F7F59A00BC0DB1 /* Encodable.swift in Sources */,
+				524CE7A224F7F62B00BC0DB1 /* DataParams.swift in Sources */,
+				524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */,
+				524CE78D24F7EC0900BC0DB1 /* Response.swift in Sources */,
+				524CE78B24F7EBEF00BC0DB1 /* MainResponse.swift in Sources */,
+				524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524CE77324F7E4A000BC0DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524CE77C24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		524CE77924F7E4A000BC0DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 524CE76024F7E49C00BC0DB1 /* CitilinkTestApp */;
+			targetProxy = 524CE77824F7E4A000BC0DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		524CE76F24F7E4A000BC0DB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524CE77024F7E4A000BC0DB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		524CE77E24F7E4A000BC0DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		524CE77F24F7E4A000BC0DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		524CE78124F7E4A000BC0DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CitilinkTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = HBK9C6DHWM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CitilinkTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nikita.nikitin.com.CitilinkTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		524CE78224F7E4A000BC0DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CitilinkTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = HBK9C6DHWM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CitilinkTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nikita.nikitin.com.CitilinkTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		524CE78424F7E4A000BC0DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBK9C6DHWM;
+				INFOPLIST_FILE = CitilinkTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nikita.nikitin.com.CitilinkTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitilinkTestApp.app/CitilinkTestApp";
+			};
+			name = Debug;
+		};
+		524CE78524F7E4A000BC0DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBK9C6DHWM;
+				INFOPLIST_FILE = CitilinkTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nikita.nikitin.com.CitilinkTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CitilinkTestApp.app/CitilinkTestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		524CE75C24F7E49C00BC0DB1 /* Build configuration list for PBXProject "CitilinkTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524CE77E24F7E4A000BC0DB1 /* Debug */,
+				524CE77F24F7E4A000BC0DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524CE78024F7E4A000BC0DB1 /* Build configuration list for PBXNativeTarget "CitilinkTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524CE78124F7E4A000BC0DB1 /* Debug */,
+				524CE78224F7E4A000BC0DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524CE78324F7E4A000BC0DB1 /* Build configuration list for PBXNativeTarget "CitilinkTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524CE78424F7E4A000BC0DB1 /* Debug */,
+				524CE78524F7E4A000BC0DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 524CE75924F7E49C00BC0DB1 /* Project object */;
+}
