@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol DebtorProtocol: Decodable {
+protocol DebtorProtocol: Codable {
     var name: String { get }
     var production: String { get }
     var details: String { get }
@@ -21,7 +21,7 @@ struct Debtor: DebtorProtocol {
     enum CodingKeys: String, CodingKey {
         case production = "exe_production"
         case subject
-        case name
+        case name = "name"
         case details
         case department
         case bailiff
@@ -40,11 +40,12 @@ struct Debtor: DebtorProtocol {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        print("container \(container)")
         name = try container.decode(String.self, forKey: .name)
         production = try container.decode(String.self, forKey: .production)
         subject = try container.decode(String.self, forKey: .subject)
         details = try container.decode(String.self, forKey: .details)
         department = try container.decode(String.self, forKey: .department)
-        bailiff = try container.decode(String.self, forKey: .bailiff)
+        bailiff = try container.decode(String.self, forKey: .bailiff).replacingOccurrences(of: "<br>", with: "\n")
     }
 }

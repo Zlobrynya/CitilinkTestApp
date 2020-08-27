@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523F837624F841CF004BB760 /* InfoDebtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F837524F841CF004BB760 /* InfoDebtorView.swift */; };
+		523F837824F84441004BB760 /* InfoDebtorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F837724F84441004BB760 /* InfoDebtorSection.swift */; };
 		524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */; };
 		524CE76724F7E49C00BC0DB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */; };
-		524CE76924F7E49C00BC0DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE76824F7E49C00BC0DB1 /* ContentView.swift */; };
 		524CE76B24F7E4A000BC0DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */; };
 		524CE76E24F7E4A000BC0DB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76D24F7E4A000BC0DB1 /* Preview Assets.xcassets */; };
 		524CE77124F7E4A000BC0DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524CE76F24F7E4A000BC0DB1 /* LaunchScreen.storyboard */; };
 		524CE77C24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE77B24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift */; };
 		524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78824F7E9CA00BC0DB1 /* Debtor.swift */; };
 		524CE78B24F7EBEF00BC0DB1 /* MainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */; };
-		524CE78D24F7EC0900BC0DB1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE78C24F7EC0900BC0DB1 /* Response.swift */; };
 		524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79024F7ED5500BC0DB1 /* HTTPStatusCode.swift */; };
 		524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79324F7EDF400BC0DB1 /* GetRequest.swift */; };
 		524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */; };
@@ -36,8 +36,12 @@
 		5256A70A24F81574002E1BDA /* BirthdayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70924F81574002E1BDA /* BirthdayText.swift */; };
 		5256A70C24F82C27002E1BDA /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70B24F82C27002E1BDA /* ButtonNext.swift */; };
 		5256A70E24F82E23002E1BDA /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70D24F82E23002E1BDA /* ActivityIndicator.swift */; };
-		5256A71124F8331B002E1BDA /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71024F8331B002E1BDA /* HideKeyboard.swift */; };
 		5256A71324F8337F002E1BDA /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71224F8337F002E1BDA /* UIApplication.swift */; };
+		5256A71624F8355F002E1BDA /* ListDebtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71524F8355F002E1BDA /* ListDebtorView.swift */; };
+		5256A71C24F83669002E1BDA /* ListDebtorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71B24F83669002E1BDA /* ListDebtorViewModel.swift */; };
+		5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */; };
+		5256A72124F83771002E1BDA /* Debtors.json in Resources */ = {isa = PBXBuildFile; fileRef = 5256A72024F83771002E1BDA /* Debtors.json */; };
+		5256A72324F837E8002E1BDA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A72224F837E8002E1BDA /* JsonObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		523F837524F841CF004BB760 /* InfoDebtorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDebtorView.swift; sourceTree = "<group>"; };
+		523F837724F84441004BB760 /* InfoDebtorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDebtorSection.swift; sourceTree = "<group>"; };
 		524CE76124F7E49C00BC0DB1 /* CitilinkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitilinkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		524CE76824F7E49C00BC0DB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524CE76D24F7E4A000BC0DB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		524CE77024F7E4A000BC0DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +69,6 @@
 		524CE77D24F7E4A000BC0DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524CE78824F7E9CA00BC0DB1 /* Debtor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtor.swift; sourceTree = "<group>"; };
 		524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponse.swift; sourceTree = "<group>"; };
-		524CE78C24F7EC0900BC0DB1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		524CE79024F7ED5500BC0DB1 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		524CE79324F7EDF400BC0DB1 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -84,8 +88,12 @@
 		5256A70924F81574002E1BDA /* BirthdayText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayText.swift; sourceTree = "<group>"; };
 		5256A70B24F82C27002E1BDA /* ButtonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNext.swift; sourceTree = "<group>"; };
 		5256A70D24F82E23002E1BDA /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		5256A71024F8331B002E1BDA /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		5256A71224F8337F002E1BDA /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		5256A71524F8355F002E1BDA /* ListDebtorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDebtorView.swift; sourceTree = "<group>"; };
+		5256A71B24F83669002E1BDA /* ListDebtorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDebtorViewModel.swift; sourceTree = "<group>"; };
+		5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListDebtorViewModel.swift; sourceTree = "<group>"; };
+		5256A72024F83771002E1BDA /* Debtors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Debtors.json; sourceTree = "<group>"; };
+		5256A72224F837E8002E1BDA /* JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		523F837424F841BF004BB760 /* InfoDebtor */ = {
+			isa = PBXGroup;
+			children = (
+				523F837524F841CF004BB760 /* InfoDebtorView.swift */,
+				523F837724F84441004BB760 /* InfoDebtorSection.swift */,
+			);
+			path = InfoDebtor;
+			sourceTree = "<group>";
+		};
 		524CE75824F7E49C00BC0DB1 = {
 			isa = PBXGroup;
 			children = (
@@ -128,16 +145,17 @@
 			isa = PBXGroup;
 			children = (
 				5256A6FE24F8091E002E1BDA /* Localization */,
-				5256A6F024F7F9B7002E1BDA /* InputData */,
 				524CE79924F7EFBA00BC0DB1 /* Extension */,
 				524CE79224F7ED9300BC0DB1 /* Enum */,
 				524CE78E24F7ECB800BC0DB1 /* NetworlClient */,
 				524CE78724F7E97B00BC0DB1 /* Models */,
 				5256A6F324F7FAC5002E1BDA /* Views */,
-				5256A70F24F832F4002E1BDA /* ViewModifier */,
+				5256A6F024F7F9B7002E1BDA /* InputData */,
+				5256A71424F8351C002E1BDA /* ListDebtor */,
+				523F837424F841BF004BB760 /* InfoDebtor */,
+				5256A71824F83570002E1BDA /* TestData */,
 				524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */,
 				524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */,
-				524CE76824F7E49C00BC0DB1 /* ContentView.swift */,
 				524CE76A24F7E4A000BC0DB1 /* Assets.xcassets */,
 				5256A6F824F7FD6A002E1BDA /* Colors.xcassets */,
 				524CE76F24F7E4A000BC0DB1 /* LaunchScreen.storyboard */,
@@ -170,7 +188,6 @@
 				524CE7A124F7F62B00BC0DB1 /* DataParams.swift */,
 				524CE78824F7E9CA00BC0DB1 /* Debtor.swift */,
 				524CE78A24F7EBEF00BC0DB1 /* MainResponse.swift */,
-				524CE78C24F7EC0900BC0DB1 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,12 +252,31 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		5256A70F24F832F4002E1BDA /* ViewModifier */ = {
+		5256A71424F8351C002E1BDA /* ListDebtor */ = {
 			isa = PBXGroup;
 			children = (
-				5256A71024F8331B002E1BDA /* HideKeyboard.swift */,
+				5256A71524F8355F002E1BDA /* ListDebtorView.swift */,
+				5256A71B24F83669002E1BDA /* ListDebtorViewModel.swift */,
 			);
-			path = ViewModifier;
+			path = ListDebtor;
+			sourceTree = "<group>";
+		};
+		5256A71824F83570002E1BDA /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				5256A71D24F83701002E1BDA /* ListDebtor */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		5256A71D24F83701002E1BDA /* ListDebtor */ = {
+			isa = PBXGroup;
+			children = (
+				5256A72024F83771002E1BDA /* Debtors.json */,
+				5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */,
+				5256A72224F837E8002E1BDA /* JsonObject.swift */,
+			);
+			path = ListDebtor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +365,7 @@
 				5256A70124F80940002E1BDA /* Localizable.strings in Resources */,
 				524CE76E24F7E4A000BC0DB1 /* Preview Assets.xcassets in Resources */,
 				524CE76B24F7E4A000BC0DB1 /* Assets.xcassets in Resources */,
+				5256A72124F83771002E1BDA /* Debtors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5256A71624F8355F002E1BDA /* ListDebtorView.swift in Sources */,
 				5256A70524F80A33002E1BDA /* LocalizedStringProvider.swift in Sources */,
 				524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */,
 				5256A70724F80FB7002E1BDA /* String.swift in Sources */,
@@ -356,21 +394,23 @@
 				524CE76724F7E49C00BC0DB1 /* SceneDelegate.swift in Sources */,
 				524CE79D24F7F19400BC0DB1 /* NetworkConstants.swift in Sources */,
 				524CE79B24F7EFCA00BC0DB1 /* URLSession.swift in Sources */,
-				524CE76924F7E49C00BC0DB1 /* ContentView.swift in Sources */,
+				523F837624F841CF004BB760 /* InfoDebtorView.swift in Sources */,
 				524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */,
+				5256A71C24F83669002E1BDA /* ListDebtorViewModel.swift in Sources */,
 				524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */,
 				5256A70E24F82E23002E1BDA /* ActivityIndicator.swift in Sources */,
 				5256A70A24F81574002E1BDA /* BirthdayText.swift in Sources */,
 				524CE79F24F7F59A00BC0DB1 /* Encodable.swift in Sources */,
 				524CE7A224F7F62B00BC0DB1 /* DataParams.swift in Sources */,
-				5256A71124F8331B002E1BDA /* HideKeyboard.swift in Sources */,
+				5256A72324F837E8002E1BDA /* JsonObject.swift in Sources */,
 				524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */,
-				524CE78D24F7EC0900BC0DB1 /* Response.swift in Sources */,
 				524CE78B24F7EBEF00BC0DB1 /* MainResponse.swift in Sources */,
+				5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */,
 				5256A70C24F82C27002E1BDA /* ButtonNext.swift in Sources */,
 				5256A6FD24F7FF2A002E1BDA /* InputDataViewModel.swift in Sources */,
 				524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */,
 				5256A6F224F7FA76002E1BDA /* InputDataView.swift in Sources */,
+				523F837824F84441004BB760 /* InfoDebtorSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CitilinkTestApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "CitilinkTestApp/TestData CitilinkTestApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = HBK9C6DHWM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CitilinkTestApp/Info.plist;
@@ -551,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CitilinkTestApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "CitilinkTestApp/TestData CitilinkTestApp/Preview\\ Content";
 				DEVELOPMENT_TEAM = HBK9C6DHWM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CitilinkTestApp/Info.plist;

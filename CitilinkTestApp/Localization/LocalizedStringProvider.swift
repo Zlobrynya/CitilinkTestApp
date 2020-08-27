@@ -54,6 +54,36 @@ extension LocalizedStringProviderProtocol {
     var selectBirthdate: String {
         NSLocalizedString("selectBirthdate", bundle: .main, comment: "")
     }
+    
+    // MARK: - Debtor's informations.
+    
+    var debtorProduction: String {
+        NSLocalizedString("debtorProduction", bundle: .main, comment: "")
+    }
+    
+    var debtorName: String {
+        NSLocalizedString("debtorName", bundle: .main, comment: "")
+    }
+    
+    var debtorDetails: String {
+        NSLocalizedString("debtorDetails", bundle: .main, comment: "")
+    }
+    
+    var debtorSubject: String {
+        NSLocalizedString("debtorSubject", bundle: .main, comment: "")
+    }
+    
+    var debtorDepartment: String {
+        NSLocalizedString("debtorDepartment", bundle: .main, comment: "")
+    }
+    
+    var debtorBailiff: String {
+        NSLocalizedString("debtorBailiff", bundle: .main, comment: "")
+    }
+    
+    var back: String {
+        NSLocalizedString("back", bundle: .main, comment: "")
+    }
 
 }
 

@@ -21,3 +21,12 @@
 "birthdate" = "Birthdate";
 "birthdatePlaceholder" = "Select birthdate";
 "selectBirthdate" = "Select birthdate";
+
+"debtorName" = "Debtor's name:";
+"debtorProduction" = "Debtor's production:";
+"debtorDetails" = "Production's details:";
+"debtorSubject" = "Production's subject:";
+"debtorDepartment" = "Department:";
+"debtorBailiff" = "Contests:";
+
+"back" = "Back";

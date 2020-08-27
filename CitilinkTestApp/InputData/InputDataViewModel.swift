@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class InputDataViewModel: ObservableObject {
+final class InputDataViewModel: ObservableObject {
     // MARK: - Public Properties
 
     @Published var firstName: String = "" { didSet { checkFirstName() } }
