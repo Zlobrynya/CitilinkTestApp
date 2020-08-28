@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         // let contentView = InputDataView(viewModel: InputDataViewModel())            .environmentObject(LocalizedStringProvider())
-
+        
+        Deobfuscation()
+        
         let contentView = ListDebtorView(
             viewModel: ListDebtorViewModel(debtors: MockListDebtorViewModel().debtors)
         ).environmentObject(LocalizedStringProvider())

@@ -11,6 +11,9 @@ import Foundation
 protocol LocalizedStringProviderProtocol {}
 
 extension LocalizedStringProviderProtocol {
+    
+    // MARK: - Input Data View
+
     var lastName: String {
         NSLocalizedString("lastName", comment: "")
     }
@@ -80,9 +83,15 @@ extension LocalizedStringProviderProtocol {
     var debtorBailiff: String {
         NSLocalizedString("debtorBailiff", bundle: .main, comment: "")
     }
+
+    // MARK: - General.
     
     var back: String {
         NSLocalizedString("back", bundle: .main, comment: "")
+    }
+    
+    var next: String {
+        NSLocalizedString("next", bundle: .main, comment: "")
     }
 
 }

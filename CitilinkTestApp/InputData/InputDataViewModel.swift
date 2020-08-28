@@ -43,7 +43,7 @@ final class InputDataViewModel: ObservableObject {
             errorFirstName = false
             return
         }
-        errorFirstName = !firstName.invalidedName(onlyK: true)
+        errorFirstName = !firstName.invalidedName(onlyCyrillic: true)
     }
 
     private func checkLastName() {
@@ -51,7 +51,7 @@ final class InputDataViewModel: ObservableObject {
             errorLastName = false
             return
         }
-        errorLastName = !lastName.invalidedName(onlyK: true)
+        errorLastName = !lastName.invalidedName(onlyCyrillic: true)
     }
 
     private func checkSecondName() {
@@ -59,6 +59,6 @@ final class InputDataViewModel: ObservableObject {
             errorSecondName = false
             return
         }
-        errorSecondName = !secondName.invalidedName(onlyK: true)
+        errorSecondName = !secondName.invalidedName(onlyCyrillic: true)
     }
 }

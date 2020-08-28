@@ -34,7 +34,7 @@ struct TextFieldView: View {
     var body: some View {
         HStack {
             TextField(placeholder, text: $text)
-            clearButton?.foregroundColor(.clearButton)
+            clearButton?.foregroundColor(.secondaryColor)
         }
     }
 }

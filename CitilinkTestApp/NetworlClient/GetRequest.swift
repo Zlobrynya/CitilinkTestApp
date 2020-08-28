@@ -12,13 +12,11 @@ protocol NetworkRequestResultHandler: AnyObject {
     ///  <#Description#>
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
     func didSucceedWithResult(_ result: NetworkResult)
     
     ///  <#Description#>
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
     func didFailWithError(_ error: Error)
 }
 
@@ -49,6 +47,7 @@ class GetRequest {
         guard var components = URLComponents(string: url) else { return }
         components.queryItems = try! parameters.asURLQueryItem(jsonEncoder: jsonEncoder)
         urlRequest = URLRequest(url: components.url!)
+        urlRequest?.httpMethod = "GET"
         self.resultHandler = resultHandler
     }
 

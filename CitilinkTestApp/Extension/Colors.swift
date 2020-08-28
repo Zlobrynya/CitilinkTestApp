@@ -9,5 +9,5 @@
 import SwiftUI
 
 extension Color {
-    static var clearButton = Color("clearButton", bundle: .main)
+    static var secondaryColor = Color("secondaryColor", bundle: .main)
 }

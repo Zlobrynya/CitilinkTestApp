@@ -21,7 +21,6 @@
 		524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79324F7EDF400BC0DB1 /* GetRequest.swift */; };
 		524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */; };
 		524CE79B24F7EFCA00BC0DB1 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79A24F7EFCA00BC0DB1 /* URLSession.swift */; };
-		524CE79D24F7F19400BC0DB1 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */; };
 		524CE79F24F7F59A00BC0DB1 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE79E24F7F59A00BC0DB1 /* Encodable.swift */; };
 		524CE7A224F7F62B00BC0DB1 /* DataParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CE7A124F7F62B00BC0DB1 /* DataParams.swift */; };
 		5256A6F224F7FA76002E1BDA /* InputDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A6F124F7FA76002E1BDA /* InputDataView.swift */; };
@@ -42,6 +41,14 @@
 		5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */; };
 		5256A72124F83771002E1BDA /* Debtors.json in Resources */ = {isa = PBXBuildFile; fileRef = 5256A72024F83771002E1BDA /* Debtors.json */; };
 		5256A72324F837E8002E1BDA /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A72224F837E8002E1BDA /* JsonObject.swift */; };
+		525E60CE24F8EDE700B2565E /* InputDataNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60CD24F8EDE700B2565E /* InputDataNetworkClient.swift */; };
+		525E60D224F8FE9C00B2565E /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525E60D124F8FE9C00B2565E /* ApiKeys.plist */; };
+		525E60D524F8FFA000B2565E /* Deobfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60D424F8FFA000B2565E /* Deobfuscation.swift */; };
+		525E60D724F902D500B2565E /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60D624F902D500B2565E /* ApiKeys.swift */; };
+		525E60D924F9031800B2565E /* Endpoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525E60D824F9031800B2565E /* Endpoint.plist */; };
+		525E60DB24F903FB00B2565E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60DA24F903FB00B2565E /* Endpoints.swift */; };
+		525E60DE24F9044500B2565E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60DD24F9044500B2565E /* DIContainer.swift */; };
+		525E60E024F904AB00B2565E /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E60DF24F904AB00B2565E /* Plist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +80,6 @@
 		524CE79324F7EDF400BC0DB1 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		524CE79A24F7EFCA00BC0DB1 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		524CE79E24F7F59A00BC0DB1 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		524CE7A124F7F62B00BC0DB1 /* DataParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParams.swift; sourceTree = "<group>"; };
 		5256A6F124F7FA76002E1BDA /* InputDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataView.swift; sourceTree = "<group>"; };
@@ -94,6 +100,14 @@
 		5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListDebtorViewModel.swift; sourceTree = "<group>"; };
 		5256A72024F83771002E1BDA /* Debtors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Debtors.json; sourceTree = "<group>"; };
 		5256A72224F837E8002E1BDA /* JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
+		525E60CD24F8EDE700B2565E /* InputDataNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataNetworkClient.swift; sourceTree = "<group>"; };
+		525E60D124F8FE9C00B2565E /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		525E60D424F8FFA000B2565E /* Deobfuscation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deobfuscation.swift; sourceTree = "<group>"; };
+		525E60D624F902D500B2565E /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		525E60D824F9031800B2565E /* Endpoint.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoint.plist; sourceTree = "<group>"; };
+		525E60DA24F903FB00B2565E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		525E60DD24F9044500B2565E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		525E60DF24F904AB00B2565E /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +158,10 @@
 		524CE76324F7E49C00BC0DB1 /* CitilinkTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				525E60DD24F9044500B2565E /* DIContainer.swift */,
+				525E60D324F8FF9200B2565E /* Service */,
+				525E60D024F8FE8A00B2565E /* ApiKey */,
+				525E60CF24F8FE8200B2565E /* Endpoint */,
 				5256A6FE24F8091E002E1BDA /* Localization */,
 				524CE79924F7EFBA00BC0DB1 /* Extension */,
 				524CE79224F7ED9300BC0DB1 /* Enum */,
@@ -197,7 +215,6 @@
 			children = (
 				524CE79324F7EDF400BC0DB1 /* GetRequest.swift */,
 				524CE79524F7EE8400BC0DB1 /* NetworkResult.swift */,
-				524CE79C24F7F19400BC0DB1 /* NetworkConstants.swift */,
 			);
 			path = NetworlClient;
 			sourceTree = "<group>";
@@ -227,6 +244,7 @@
 			children = (
 				5256A6F124F7FA76002E1BDA /* InputDataView.swift */,
 				5256A6FC24F7FF2A002E1BDA /* InputDataViewModel.swift */,
+				525E60CD24F8EDE700B2565E /* InputDataNetworkClient.swift */,
 			);
 			path = InputData;
 			sourceTree = "<group>";
@@ -277,6 +295,33 @@
 				5256A72224F837E8002E1BDA /* JsonObject.swift */,
 			);
 			path = ListDebtor;
+			sourceTree = "<group>";
+		};
+		525E60CF24F8FE8200B2565E /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				525E60D824F9031800B2565E /* Endpoint.plist */,
+				525E60DA24F903FB00B2565E /* Endpoints.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		525E60D024F8FE8A00B2565E /* ApiKey */ = {
+			isa = PBXGroup;
+			children = (
+				525E60D124F8FE9C00B2565E /* ApiKeys.plist */,
+				525E60D624F902D500B2565E /* ApiKeys.swift */,
+			);
+			path = ApiKey;
+			sourceTree = "<group>";
+		};
+		525E60D324F8FF9200B2565E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				525E60D424F8FFA000B2565E /* Deobfuscation.swift */,
+				525E60DF24F904AB00B2565E /* Plist.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525E60D224F8FE9C00B2565E /* ApiKeys.plist in Resources */,
+				525E60D924F9031800B2565E /* Endpoint.plist in Resources */,
 				524CE77124F7E4A000BC0DB1 /* LaunchScreen.storyboard in Resources */,
 				5256A6F924F7FD6A002E1BDA /* Colors.xcassets in Resources */,
 				5256A70124F80940002E1BDA /* Localizable.strings in Resources */,
@@ -390,13 +437,17 @@
 				5256A71324F8337F002E1BDA /* UIApplication.swift in Sources */,
 				5256A6F524F7FAF6002E1BDA /* TextFieldWithErrorAndTitle.swift in Sources */,
 				5256A6F724F7FC8F002E1BDA /* TextFieldView.swift in Sources */,
+				525E60DB24F903FB00B2565E /* Endpoints.swift in Sources */,
 				5256A6FB24F7FD86002E1BDA /* Colors.swift in Sources */,
 				524CE76724F7E49C00BC0DB1 /* SceneDelegate.swift in Sources */,
-				524CE79D24F7F19400BC0DB1 /* NetworkConstants.swift in Sources */,
 				524CE79B24F7EFCA00BC0DB1 /* URLSession.swift in Sources */,
+				525E60D724F902D500B2565E /* ApiKeys.swift in Sources */,
+				525E60D524F8FFA000B2565E /* Deobfuscation.swift in Sources */,
 				523F837624F841CF004BB760 /* InfoDebtorView.swift in Sources */,
 				524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */,
+				525E60E024F904AB00B2565E /* Plist.swift in Sources */,
 				5256A71C24F83669002E1BDA /* ListDebtorViewModel.swift in Sources */,
+				525E60CE24F8EDE700B2565E /* InputDataNetworkClient.swift in Sources */,
 				524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */,
 				5256A70E24F82E23002E1BDA /* ActivityIndicator.swift in Sources */,
 				5256A70A24F81574002E1BDA /* BirthdayText.swift in Sources */,
@@ -408,6 +459,7 @@
 				5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */,
 				5256A70C24F82C27002E1BDA /* ButtonNext.swift in Sources */,
 				5256A6FD24F7FF2A002E1BDA /* InputDataViewModel.swift in Sources */,
+				525E60DE24F9044500B2565E /* DIContainer.swift in Sources */,
 				524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */,
 				5256A6F224F7FA76002E1BDA /* InputDataView.swift in Sources */,
 				523F837824F84441004BB760 /* InfoDebtorSection.swift in Sources */,

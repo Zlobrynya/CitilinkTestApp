@@ -22,6 +22,8 @@
 "birthdatePlaceholder" = "Select birthdate";
 "selectBirthdate" = "Select birthdate";
 
+// MARK: - Debtor Information View
+
 "debtorName" = "Debtor's name:";
 "debtorProduction" = "Debtor's production:";
 "debtorDetails" = "Production's details:";
@@ -29,4 +31,7 @@
 "debtorDepartment" = "Department:";
 "debtorBailiff" = "Contests:";
 
+// MARK: - General
+
 "back" = "Back";
+"next" = "Next";

@@ -40,7 +40,6 @@ struct Debtor: DebtorProtocol {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        print("container \(container)")
         name = try container.decode(String.self, forKey: .name)
         production = try container.decode(String.self, forKey: .production)
         subject = try container.decode(String.self, forKey: .subject)

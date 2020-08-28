@@ -12,7 +12,7 @@ struct BirthdayText: View {
     var textWithPlaceholder: Text {
         if text.isEmpty {
             return Text(stringProvider.birthdatePlaceholder)
-                .foregroundColor(.clearButton)
+                .foregroundColor(.secondaryColor)
         } else {
             return Text(text)
         }

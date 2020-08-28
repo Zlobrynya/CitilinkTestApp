@@ -10,12 +10,12 @@ import Foundation
 
 extension String {
     
-    ///  <#Description#>
+    ///  Checking the name for correctness.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
-    func invalidedName(onlyK: Bool) -> Bool {
-        let urlRegEx = onlyK ? "^[а-яА-ЯёЁ]{1,20}$" : "^[а-яА-ЯёЁa-zA-Z]{1,25}$"
+    /// - Parameter onlyCyrillic: Flag for checking only Cyrillic.
+    /// - Returns: Test result.
+    func invalidedName(onlyCyrillic: Bool) -> Bool {
+        let urlRegEx = onlyCyrillic ? "^[а-яА-ЯёЁ]{1,20}$" : "^[а-яА-ЯёЁa-zA-Z]{1,25}$"
         return (self.range(of: urlRegEx, options:.regularExpression) != nil)
     }
     

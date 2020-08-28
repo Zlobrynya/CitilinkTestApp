@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>api</key>
+	<string>[32, 0, 25, 105, 12, 28, 75, 1, 18, 7, 21, 28, 28, 24, 71, 6, 20, 1, 15, 25, 2, 70, 2, 88, 64, 30]</string>
+	<key>physical</key>
+	<string>[110, 3, 21, 37, 23, 15, 13, 72, 17, 28, 28, 29, 0, 8, 8, 24]</string>
+	<key>result</key>
+	<string>[110, 2, 21, 55, 16, 0, 17]</string>
+</dict>
+</plist>
