@@ -9,6 +9,10 @@
 import Foundation
 
 extension Encodable {
+    ///  <#Description#>
+    ///
+    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
+    /// - Returns: <#Returns Description#>
     func asURLQueryItem(jsonEncoder: JSONEncoder) throws -> [URLQueryItem] {
         let data = try jsonEncoder.encode(self)
         guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: String] else {

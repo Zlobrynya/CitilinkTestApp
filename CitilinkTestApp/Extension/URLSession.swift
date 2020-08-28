@@ -17,25 +17,23 @@ extension URLSession {
     func dataTask(
         with request: URLRequest,
         onResult: @escaping (NetworkResult) -> Void,
-        onError: @escaping (Error) -> Void
+        onError: @escaping (NetworkError) -> Void
     ) -> URLSessionDataTask {
         dataTask(with: request, completionHandler: { data, response, error in
             if let error = error {
-                onError(error)
+                onError(NetworkError.error(error))
             } else if let data = data {
                 let httpResponse = response as? HTTPURLResponse
                 if
                     let httpResponse = httpResponse,
                     let statusCode = HTTPStatusCode(rawValue: httpResponse.statusCode),
                     statusCode.rawValue >= 400 {
-                    //TODO
-                    //onError(NetworkingError.httpError(statusCode: statusCode))
+                    onError(NetworkError.statusCode(statusCode))
                 } else {
                     onResult(NetworkResult(data: data, metadata: httpResponse))
                 }
             } else {
-                //TODO
-                //onError()
+                onError(NetworkError.emptyResponse)
             }
         })
     }

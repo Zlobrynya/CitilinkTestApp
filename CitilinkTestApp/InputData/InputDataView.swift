@@ -54,7 +54,9 @@ struct InputDataView: View {
         guard !shouldShowDatePicker else { return AnyView(EmptyView()) }
         return AnyView(VStack {
             Spacer()
-            ButtonNext(isEnabled: viewModel.isEnabled, isLoading: $viewModel.isLoading) {}
+            ButtonNext(isEnabled: viewModel.isEnabled, isLoading: $viewModel.isLoading) {
+                self.viewModel.fetchData()
+            }
         })
     }
 
@@ -70,6 +72,11 @@ struct InputDataView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                NavigationLink(
+                    destination: ListDebtorView(viewModel: ListDebtorViewModel(debtors: viewModel.debtors)),
+                    isActive: $viewModel.shouldPresentDebtor,
+                    label: { EmptyView() }
+                )
                 textFields
                 button
             }.onTapGesture {

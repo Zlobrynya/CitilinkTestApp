@@ -8,19 +8,10 @@
 
 import Foundation
 
-protocol DataParamsProtocol: Encodable {
-    var token: String { get }
-    var region: String { get }
-    var firstName: String { get }
-    var secondName: String { get }
-    var lastName: String { get }
-    var birthdate: String { get }
-}
-
-struct DataParams: DataParamsProtocol {
+struct TaskParameters: Encodable {
     
     enum CodingKeys: String, CodingKey {
-        case firstName = "firstName"
+        case firstName = "firstname"
         case secondName = "secondname"
         case lastName = "lastname"
         case token

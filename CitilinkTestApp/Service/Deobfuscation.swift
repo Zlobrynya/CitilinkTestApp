@@ -25,10 +25,8 @@ class Deobfuscation: DeobfuscationProtocol {
 
     // MARK: - Lifecycle
 
-    public init?(bundle: Bundle = Bundle.main) {
-        guard let bundleIdentifier = bundle.bundleIdentifier else { return nil }
-        salt = String(describing: AppDelegate.self) + bundleIdentifier
-        print(salt)
+    public init(salt: String = String(describing: AppDelegate.self) + "nikita.nikitin.com.CitilinkTestApp") {
+        self.salt = salt
     }
 
     // MARK: - Public Functions

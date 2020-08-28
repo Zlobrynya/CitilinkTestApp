@@ -12,12 +12,12 @@ protocol NetworkRequestResultHandler: AnyObject {
     ///  <#Description#>
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    func didSucceedWithResult(_ result: NetworkResult)
+    func requestDidSucceed(with result: NetworkResult)
     
     ///  <#Description#>
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    func didFailWithError(_ error: Error)
+    func requestDidFail(with error: NetworkError)
 }
 
 class GetRequest {
@@ -42,9 +42,9 @@ class GetRequest {
         jsonEncoder: JSONEncoder = JSONEncoder(),
         urlSession: URLSession = URLSession.shared,
         resultHandler: NetworkRequestResultHandler?
-    ) {
+    ) throws {
         session = urlSession
-        guard var components = URLComponents(string: url) else { return }
+        guard var components = URLComponents(string: url) else { throw NetworkError.invalidUrl }
         components.queryItems = try! parameters.asURLQueryItem(jsonEncoder: jsonEncoder)
         urlRequest = URLRequest(url: components.url!)
         urlRequest?.httpMethod = "GET"
@@ -57,8 +57,8 @@ class GetRequest {
         let resultHandler = self.resultHandler
         task = session.dataTask(
             with: urlRequest!,
-            onResult: { resultHandler?.didSucceedWithResult($0) },
-            onError: { resultHandler?.didFailWithError($0) }
+            onResult: { resultHandler?.requestDidSucceed(with: $0) },
+            onError: { resultHandler?.requestDidFail(with: $0) }
         )
         task?.resume()
     }

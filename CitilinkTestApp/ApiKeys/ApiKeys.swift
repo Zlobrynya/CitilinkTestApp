@@ -8,10 +8,10 @@
 
 import Foundation
 
-public protocol ApiKeysProtocol: Codable {
+protocol ApiKeysProtocol: Codable {
     var token: String { get }
 }
 
-public struct ApiKeys: ApiKeysProtocol {
+struct ApiKeys: ApiKeysProtocol {
     public var token: String
 }

@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-final class InputDataViewModel: ObservableObject {
+final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandler {
+
     // MARK: - Public Properties
 
     @Published var firstName: String = "" { didSet { checkFirstName() } }
@@ -20,20 +21,54 @@ final class InputDataViewModel: ObservableObject {
 
     @Published var isLoading = false
     @Published var isEnabled = false
+    @Published var shouldPresentDebtor = false
 
     @Published var errorFirstName: Bool = false
     @Published var errorLastName: Bool = false
     @Published var errorSecondName: Bool = false
     
+    var debtors: [Debtor] = []
+    
     // MARK: - External Dependencies
     
-    let dateFormatter: DateFormatter
-
+    private let dateFormatter: DateFormatter
+    private let debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol
+    
     // MARK: - Lifecycle
 
-    init(dateFormatter: DateFormatter = DateFormatter()) {
+    init(
+        dateFormatter: DateFormatter = DateFormatter(),
+        debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol = DebtorsDataNetworkClient()
+    ) {
         dateFormatter.dateFormat = "dd MMMM yyyy"
         self.dateFormatter = dateFormatter
+        self.debtorsDataNetworkClient = debtorsDataNetworkClient
+        self.debtorsDataNetworkClient.resultHandler = self
+    }
+    
+    // MARK: - Public Functions
+
+    func fetchData() {
+        debtorsDataNetworkClient.fetchData(
+            forFirstName: firstName,
+            withLastName: lastName,
+            andSecondaryName: secondName,
+            andBirthday: messageBirthDate
+        )
+    }
+    
+    // MARK: - DebtorsDataNetworkResultHandler Conformance
+
+    
+    func debtorsDataRequestDidFailed(_ error: Error) {
+        Log.error(error)
+    }
+    
+    func debtorsDataRequestDidSucceed(_ debtors: [Debtor]) {
+        self.debtors = debtors
+        DispatchQueue.main.async {
+            self.shouldPresentDebtor = true
+        }
     }
 
     // MARK: - Private Functions
