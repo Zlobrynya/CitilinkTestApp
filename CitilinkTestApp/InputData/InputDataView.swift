@@ -54,6 +54,7 @@ struct InputDataView: View {
     @ObservedObject var viewModel: InputDataViewModel
     @State private var birthDate = Date()
     @State var shouldShowDatePicker = false
+    @State var isKeyboardShow = false
 
     // MARK: - Body
 
@@ -68,8 +69,23 @@ struct InputDataView: View {
                 textFields
                 button
             }
+            .allowsHitTesting(isKeyboardShow)
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
+            .onReceive(
+                NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification)
+                    .receive(on: RunLoop.main),
+                perform: updateKeyboardHeight
+            )
             .navigationBarTitle("", displayMode: .inline)
         }
+    }
+
+    // MARK: - Private Functions
+
+    private func updateKeyboardHeight(_: Foundation.Notification) {
+        isKeyboardShow = !isKeyboardShow
     }
 }
 

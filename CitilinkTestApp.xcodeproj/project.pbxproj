@@ -35,7 +35,6 @@
 		5256A70A24F81574002E1BDA /* BirthdayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70924F81574002E1BDA /* BirthdayText.swift */; };
 		5256A70C24F82C27002E1BDA /* ButtonNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70B24F82C27002E1BDA /* ButtonNext.swift */; };
 		5256A70E24F82E23002E1BDA /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A70D24F82E23002E1BDA /* ActivityIndicator.swift */; };
-		5256A71324F8337F002E1BDA /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71224F8337F002E1BDA /* UIApplication.swift */; };
 		5256A71624F8355F002E1BDA /* ListDebtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71524F8355F002E1BDA /* ListDebtorView.swift */; };
 		5256A71C24F83669002E1BDA /* ListDebtorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71B24F83669002E1BDA /* ListDebtorViewModel.swift */; };
 		5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */; };
@@ -61,6 +60,7 @@
 		52F941DA24F99C2400131B5F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941D924F99C2400131B5F /* Status.swift */; };
 		52F941DC24F99C6E00131B5F /* TaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941DB24F99C6E00131B5F /* TaskStatus.swift */; };
 		52F941DE24F99DE300131B5F /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941DD24F99DE300131B5F /* Throttler.swift */; };
+		52F941E024F9B01400131B5F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941DF24F9B01400131B5F /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +106,6 @@
 		5256A70924F81574002E1BDA /* BirthdayText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayText.swift; sourceTree = "<group>"; };
 		5256A70B24F82C27002E1BDA /* ButtonNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNext.swift; sourceTree = "<group>"; };
 		5256A70D24F82E23002E1BDA /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		5256A71224F8337F002E1BDA /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		5256A71524F8355F002E1BDA /* ListDebtorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDebtorView.swift; sourceTree = "<group>"; };
 		5256A71B24F83669002E1BDA /* ListDebtorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDebtorViewModel.swift; sourceTree = "<group>"; };
 		5256A71E24F83715002E1BDA /* MockListDebtorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListDebtorViewModel.swift; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		52F941D924F99C2400131B5F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		52F941DB24F99C6E00131B5F /* TaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatus.swift; sourceTree = "<group>"; };
 		52F941DD24F99DE300131B5F /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		52F941DF24F9B01400131B5F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +263,7 @@
 				524CE79E24F7F59A00BC0DB1 /* Encodable.swift */,
 				5256A6FA24F7FD86002E1BDA /* Colors.swift */,
 				5256A70624F80FB7002E1BDA /* String.swift */,
-				5256A71224F8337F002E1BDA /* UIApplication.swift */,
+				52F941DF24F9B01400131B5F /* UIApplication.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -488,7 +488,6 @@
 				5256A70524F80A33002E1BDA /* LocalizedStringProvider.swift in Sources */,
 				524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */,
 				5256A70724F80FB7002E1BDA /* String.swift in Sources */,
-				5256A71324F8337F002E1BDA /* UIApplication.swift in Sources */,
 				5256A6F524F7FAF6002E1BDA /* TextFieldWithErrorAndTitle.swift in Sources */,
 				52F941DA24F99C2400131B5F /* Status.swift in Sources */,
 				5256A6F724F7FC8F002E1BDA /* TextFieldView.swift in Sources */,
@@ -501,6 +500,7 @@
 				52F941DC24F99C6E00131B5F /* TaskStatus.swift in Sources */,
 				525E60D724F902D500B2565E /* ApiKeys.swift in Sources */,
 				525E60D524F8FFA000B2565E /* Deobfuscation.swift in Sources */,
+				52F941E024F9B01400131B5F /* UIApplication.swift in Sources */,
 				523F837624F841CF004BB760 /* InfoDebtorView.swift in Sources */,
 				524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */,
 				525E60E024F904AB00B2565E /* Plist.swift in Sources */,
