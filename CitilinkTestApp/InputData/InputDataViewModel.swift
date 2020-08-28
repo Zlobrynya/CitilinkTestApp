@@ -16,8 +16,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     @Published var lastName: String = "" { didSet { checkLastName() } }
     @Published var secondName: String = "" { didSet { checkSecondName() } }
 
-    @Published var birthDate = Date() { didSet { messageBirthDate = dateFormatter.string(from: birthDate) } }
-    @Published var messageBirthDate = ""
+    @Published var birthDate = Date()
 
     @Published var isLoading = false
     @Published var isEnabled = false
@@ -41,7 +40,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
         dateFormatter: DateFormatter = DateFormatter(),
         debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol = DebtorsDataNetworkClient()
     ) {
-        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.dateFormat = "dd.mm.YYYY"
         self.dateFormatter = dateFormatter
         self.debtorsDataNetworkClient = debtorsDataNetworkClient
         self.debtorsDataNetworkClient.resultHandler = self
@@ -54,7 +53,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
             forFirstName: firstName,
             withLastName: lastName,
             andSecondaryName: secondName,
-            andBirthday: messageBirthDate
+            andBirthday: withDate ? dateFormatter.string(from: birthDate) : ""
         )
     }
     
