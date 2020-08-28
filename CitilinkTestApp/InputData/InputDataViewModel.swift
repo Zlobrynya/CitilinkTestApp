@@ -22,6 +22,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     @Published var isLoading = false
     @Published var isEnabled = false
     @Published var shouldPresentDebtor = false
+    @Published var withDate = false
 
     @Published var errorFirstName: Bool = false
     @Published var errorLastName: Bool = false

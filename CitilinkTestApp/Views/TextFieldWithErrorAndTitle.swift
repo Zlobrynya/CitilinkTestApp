@@ -28,12 +28,10 @@ struct TextFieldWithError: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(title)
+        Section(header: Text(title).bold()) {
             TextFieldView(text: $text, placeholder: placeholder)
             errorView
         }
-        .padding([.horizontal], 16)
     }
 }
 

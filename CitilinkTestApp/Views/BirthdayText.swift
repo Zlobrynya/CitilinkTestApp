@@ -9,37 +9,55 @@
 import SwiftUI
 
 struct BirthdayText: View {
-    var textWithPlaceholder: Text {
-        if text.isEmpty {
-            return Text(stringProvider.birthdatePlaceholder)
-                .foregroundColor(.secondaryColor)
-        } else {
-            return Text(text)
+    private var clearButton: some View {
+        HStack {
+            Spacer()
+            Button(
+                action: {
+                    self.withDate = false
+                },
+                label: {
+                    Text("Clear")
+                }
+            )
+            Spacer()
         }
     }
 
     // MARK: - External Dependencies
 
     @EnvironmentObject private var stringProvider: LocalizedStringProvider
-    @Binding var text: String
+    @Binding var birthDate: Date
+    @Binding var withDate: Bool
 
     // MARK: - Body
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(stringProvider.birthdate)
-            textWithPlaceholder
+        Section(header: Text(stringProvider.birthdate).bold()) {
+            if withDate {
+                clearButton
+                DatePicker(stringProvider.birthdatePlaceholder, selection: $birthDate, displayedComponents: .date)
+                    .padding()
+
+            } else {
+                Button(
+                    action: { self.withDate = true },
+                    label: {
+                        Text(stringProvider.birthdatePlaceholder)
+                    }
+                )
+                .foregroundColor(.secondaryColor)
+            }
         }
-        .padding([.horizontal], 16)
     }
 }
 
 struct BirthdayText_Previews: PreviewProvider {
-    @State static var text: String = ""
-    @State static var error: Bool = false
+    @State static var birthDate = Date()
+    @State static var withDate = false
 
     static var previews: some View {
-        BirthdayText(text: $text)
+        BirthdayText(birthDate: $birthDate, withDate: $withDate)
             .environmentObject(LocalizedStringProvider())
     }
 }

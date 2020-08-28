@@ -12,8 +12,7 @@ struct InputDataView: View {
     // MARK: - Views
 
     var textFields: some View {
-        VStack(alignment: .leading) {
-            Divider()
+        Form {
             TextFieldWithError(
                 text: $viewModel.lastName,
                 title: stringProvider.lastName,
@@ -21,7 +20,6 @@ struct InputDataView: View {
                 errorMessage: stringProvider.lastNameError,
                 isError: $viewModel.errorLastName
             )
-            Divider()
             TextFieldWithError(
                 text: $viewModel.firstName,
                 title: stringProvider.firstName,
@@ -29,7 +27,6 @@ struct InputDataView: View {
                 errorMessage: stringProvider.firstNameError,
                 isError: $viewModel.errorFirstName
             )
-            Divider()
             TextFieldWithError(
                 text: $viewModel.secondName,
                 title: stringProvider.secondaryName,
@@ -37,16 +34,7 @@ struct InputDataView: View {
                 errorMessage: stringProvider.secondaryNameError,
                 isError: $viewModel.errorSecondName
             )
-            Divider()
-            BirthdayText(text: $viewModel.messageBirthDate)
-            HStack {
-                Spacer()
-                DatePicker("", selection: $viewModel.birthDate, in: ...Date(), displayedComponents: .date)
-                    .labelsHidden()
-                    .padding()
-                Spacer()
-            }
-            Spacer()
+            BirthdayText(birthDate: $viewModel.birthDate, withDate: $viewModel.withDate)
         }
     }
 
@@ -79,9 +67,8 @@ struct InputDataView: View {
                 )
                 textFields
                 button
-            }.onTapGesture {
-                UIApplication.shared.endEditing(true)
             }
+            .navigationBarTitle("", displayMode: .inline)
         }
     }
 }
