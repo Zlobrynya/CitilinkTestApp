@@ -35,6 +35,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     private let debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol
     private let stringProvider: LocalizedStringProviderProtocol
     private let settings: SettingsProtocol
+    private let lastSearch: LastSearchProtocol
 
     // MARK: - Lifecycle
 
@@ -42,26 +43,44 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
         dateFormatter: DateFormatter = DateFormatter(),
         debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol = DebtorsDataNetworkClient(),
         stringProvider: LocalizedStringProviderProtocol = LocalizedStringProvider(),
-        settings: SettingsProtocol = Settings()
+        settings: SettingsProtocol = Settings(),
+        lastSearch: LastSearchProtocol = LastSearch()
     ) {
         dateFormatter.dateFormat = "dd.MM.YYYY"
         self.dateFormatter = dateFormatter
         self.debtorsDataNetworkClient = debtorsDataNetworkClient
         self.stringProvider = stringProvider
         self.settings = settings
-
+        self.lastSearch = lastSearch
+        
         self.debtorsDataNetworkClient.resultHandler = self
     }
 
+    func onAppear() {
+        firstName = lastSearch.firstName
+        lastName = lastSearch.lastName
+        secondName = lastSearch.secondName
+        guard let lastDate = dateFormatter.date(from: lastSearch.birthday)  else { return }
+        
+        isWithDate = true
+        birthDate = lastDate
+    }
     // MARK: - Public Functions
 
     func fetchData() {
         isLoading = true
+        let stringDate = isWithDate ? dateFormatter.string(from: birthDate) : ""
+        lastSearch.update(
+            lastName: lastName,
+            firstName: firstName,
+            secondName: secondName,
+            birthday: stringDate
+        )
         debtorsDataNetworkClient.fetchData(
             forFirstName: firstName,
             withLastName: lastName,
             andSecondaryName: secondName,
-            andBirthday: isWithDate ? dateFormatter.string(from: birthDate) : ""
+            andBirthday: stringDate
         )
     }
 

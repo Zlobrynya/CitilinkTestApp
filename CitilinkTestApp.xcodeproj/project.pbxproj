@@ -56,6 +56,8 @@
 		52D2C0DD24F98ECD00A80609 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0DC24F98ECD00A80609 /* Log.swift */; };
 		52D2C0DF24F992ED00A80609 /* DebtorsNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0DE24F992ED00A80609 /* DebtorsNetworkClient.swift */; };
 		52D2C0E124F993B200A80609 /* DebtorsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0E024F993B200A80609 /* DebtorsParameters.swift */; };
+		52E5E85624FAB423007EEDFB /* LastSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85524FAB423007EEDFB /* LastSearch.swift */; };
+		52E5E85824FAB42D007EEDFB /* LastSearchKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85724FAB42D007EEDFB /* LastSearchKeys.swift */; };
 		52F6079824FAA75300E3E7EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079724FAA75300E3E7EE /* SettingsView.swift */; };
 		52F6079A24FAA77800E3E7EE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */; };
 		52F6079D24FAA8B600E3E7EE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079C24FAA8B600E3E7EE /* Settings.swift */; };
@@ -131,6 +133,8 @@
 		52D2C0DC24F98ECD00A80609 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		52D2C0DE24F992ED00A80609 /* DebtorsNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsNetworkClient.swift; sourceTree = "<group>"; };
 		52D2C0E024F993B200A80609 /* DebtorsParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsParameters.swift; sourceTree = "<group>"; };
+		52E5E85524FAB423007EEDFB /* LastSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearch.swift; sourceTree = "<group>"; };
+		52E5E85724FAB42D007EEDFB /* LastSearchKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchKeys.swift; sourceTree = "<group>"; };
 		52F6079724FAA75300E3E7EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		52F6079C24FAA8B600E3E7EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -386,6 +390,15 @@
 			path = Parameters;
 			sourceTree = "<group>";
 		};
+		52E5E85424FAB3A7007EEDFB /* LastSearch */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E85524FAB423007EEDFB /* LastSearch.swift */,
+				52E5E85724FAB42D007EEDFB /* LastSearchKeys.swift */,
+			);
+			path = LastSearch;
+			sourceTree = "<group>";
+		};
 		52F6079624FAA73A00E3E7EE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +411,7 @@
 		52F6079B24FAA85B00E3E7EE /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				52E5E85424FAB3A7007EEDFB /* LastSearch */,
 				52F6079E24FAA91E00E3E7EE /* Settings */,
 			);
 			path = UserDefaults;
@@ -551,11 +565,13 @@
 				524CE78924F7E9CA00BC0DB1 /* Debtor.swift in Sources */,
 				52F941D824F99B4000131B5F /* StatusNetworkClient.swift in Sources */,
 				5256A70E24F82E23002E1BDA /* ActivityIndicator.swift in Sources */,
+				52E5E85624FAB423007EEDFB /* LastSearch.swift in Sources */,
 				5256A70A24F81574002E1BDA /* BirthdayText.swift in Sources */,
 				524CE79F24F7F59A00BC0DB1 /* Encodable.swift in Sources */,
 				524CE7A224F7F62B00BC0DB1 /* TaskParameters.swift in Sources */,
 				5256A72324F837E8002E1BDA /* JsonObject.swift in Sources */,
 				52D2C0D524F9841A00A80609 /* NetworkClientFactory.swift in Sources */,
+				52E5E85824FAB42D007EEDFB /* LastSearchKeys.swift in Sources */,
 				524CE79424F7EDF400BC0DB1 /* GetRequest.swift in Sources */,
 				524CE78B24F7EBEF00BC0DB1 /* MainResponse.swift in Sources */,
 				5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */,

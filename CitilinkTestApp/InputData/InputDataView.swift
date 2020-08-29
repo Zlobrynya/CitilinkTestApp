@@ -69,6 +69,14 @@ struct InputDataView: View {
                 )
                 textFields
             }
+            .onAppear { self.viewModel.onAppear() }
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(trailing:
+                Button(
+                    action: { self.viewModel.shouldShowSettings.toggle() },
+                    label: { Image(systemName: "wrench") }
+                )
+            )
             .allowsHitTesting(isKeyboardShow || viewModel.isLoading)
             .onTapGesture {
                 UIApplication.shared.endEditing()
@@ -77,13 +85,6 @@ struct InputDataView: View {
                 NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification)
                     .receive(on: RunLoop.main),
                 perform: updateKeyboardHeight
-            )
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing:
-                Button(
-                    action: { self.viewModel.shouldShowSettings.toggle() },
-                    label: { Image(systemName: "wrench") }
-                )
             )
             .alert(isPresented: $viewModel.shouldShowAlert) {
                 Alert(title: Text(viewModel.alertMessage))
