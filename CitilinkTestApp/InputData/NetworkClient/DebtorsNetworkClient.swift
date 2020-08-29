@@ -9,30 +9,24 @@
 import Foundation
 
 protocol DebtorsNetworkClientResultHandler: AnyObject {
-    ///  <#Description#>
+    /// Called when the debtors was fetched failed.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter error: Any error that occurred when trying to get debtors data.
     func debtorsRequestDidFailed(_ error: Error)
 
-    ///  <#Description#>
+    /// Called when the debtors was received successfully.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter debtors: An array of debtors received from the server.
     func debtorsRequestDidSucceed(_ debtors: [Debtor])
 }
 
 protocol DebtorsNetworkClientProtocol: AnyObject {
-    ///  <#Description#>
+    /// Fetches debtors data from the server.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter task: Task's id.
     func fetchDebtorsForTask(_ task: String)
 
-    ///  <#Description#>
-    ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// The object that acts as the result handler for fetching debtors.
     var resultHandler: DebtorsNetworkClientResultHandler? { get set }
 }
 

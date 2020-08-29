@@ -19,10 +19,9 @@ extension String {
         return (range(of: urlRegEx, options: .regularExpression) != nil)
     }
 
-    ///  <#Description#>
+    ///  Converts an array represented in a string to a numeric array.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: Returns Description
+    /// - Returns: Numeric array
     func toUInt8() -> [UInt8] {
         replacingOccurrences(of: "[", with: "")
             .replacingOccurrences(of: "]", with: "")

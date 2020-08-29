@@ -14,10 +14,12 @@ protocol LastSearchProtocol {
     var secondName: String { get }
     var birthday: String { get }
 
-    ///  <#Description#>
+    ///  Updates information about the last search
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter lastName: Debtor's last name.
+    /// - Parameter firstName: Debtor's first name.
+    /// - Parameter secondName: Debtor's second name.
+    /// - Parameter birthday: Debtor's birthday.
     func update(lastName: String, firstName: String, secondName: String, birthday: String)
 }
 

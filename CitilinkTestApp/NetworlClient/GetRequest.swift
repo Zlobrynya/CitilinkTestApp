@@ -9,14 +9,7 @@
 import Foundation
 
 protocol NetworkRequestResultHandler: AnyObject {
-    ///  <#Description#>
-    ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
     func requestDidSucceed(with result: NetworkResult)
-    
-    ///  <#Description#>
-    ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
     func requestDidFail(with error: NetworkError)
 }
 

@@ -93,14 +93,14 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     // MARK: - DebtorsDataNetworkResultHandler Conformance
 
     func debtorsDataRequestDidFailed(_ error: Error) {
-        executeOnMainQueue {
+        DispatchQueue.main.async {
             self.isLoading = false
             self.alertMessage = self.stringProvider.somethingWrong
         }
     }
 
     func debtorsDataRequestDidSucceed(_ debtors: [Debtor]) {
-        executeOnMainQueue {
+        DispatchQueue.main.async {
             self.isLoading = false
             self.debtors = debtors
             if self.debtors.isEmpty {

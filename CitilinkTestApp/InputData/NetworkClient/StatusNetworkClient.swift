@@ -9,30 +9,25 @@
 import Foundation
 
 protocol StatusNetworkClientResultHandler: AnyObject {
-    ///  <#Description#>
+    /// Called when the status was fetched failed.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter error: Any error that occurred when trying to get status.
     func statusRequestDidFailed(_ error: Error)
 
-    ///  <#Description#>
+    /// Called when the task's status was received successfully.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter status: Task's status..
+    /// - Parameter task: Task's id.
     func statusRequestDidSucceed(_ status: TaskStatus, task: String)
 }
 
 protocol StatusNetworkClientProtocol: NetworkRequestResultHandler {
-    ///  <#Description#>
+    /// Fetches task's status from the server.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter task: Task's id.
     func fetchStatusForTask(_ task: String)
 
-    ///  <#Description#>
-    ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// The object that acts as the result handler for fetching task's status.
     var resultHandler: StatusNetworkClientResultHandler? { get set }
 }
 

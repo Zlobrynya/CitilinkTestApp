@@ -9,24 +9,25 @@
 import Foundation
 
 protocol DebtorsDataNetworkResultHandler: AnyObject {
-    ///  <#Description#>
+    
+    /// Called when the debtors data was fetched failed.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter error: Any error that occurred when trying to get debtors data.
     func debtorsDataRequestDidFailed(_ error: Error)
 
-    ///  <#Description#>
+    /// Called when the debtors data was received successfully.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter debtors: An array of debtors received from the server.
     func debtorsDataRequestDidSucceed(_ debtors: [Debtor])
 }
 
 protocol DebtorsDataNetworkClientProtocol: AnyObject {
-    ///  <#Description#>
+    /// Fetches debtors data from the server.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter lastName: Debtor's last name.
+    /// - Parameter firstName: Debtor's first name.
+    /// - Parameter secondName: Debtor's second name.
+    /// - Parameter birthday: Debtor's birthday.
     func fetchData(
         forFirstName firstName: String,
         withLastName lastName: String,
@@ -34,6 +35,7 @@ protocol DebtorsDataNetworkClientProtocol: AnyObject {
         andBirthday birthday: String
     )
 
+    /// The object that acts as the result handler for fetching debtors data.
     var resultHandler: DebtorsDataNetworkResultHandler? { get set }
 }
 

@@ -12,6 +12,10 @@ protocol SettingsProtocol {
     var isOnlyCyrillic: Bool { get }
     var isRequiredFieldBirthday: Bool { get }
     
+    ///  Updates information about app's settings.
+    ///
+    /// - Parameter isOnlyCyrillic: The checker flag Cyrillic.
+    /// - Parameter isRequiredFieldBirthday: Flag for an important field.
     func update(isOnlyCyrillic: Bool, isRequiredFieldBirthday: Bool)
 }
 

@@ -9,10 +9,12 @@
 import Foundation
 
 protocol NetworkClientFactoryProtocol {
-    ///  Description
+    /// Creates a `GetRequest` with HTTP method GET.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter url: The url for the request.
+    /// - Parameter parameters: The parameters needed for the request.
+    /// - Parameter resultHandler: The `NetworkRequestResultHandler` which will be notified about the result of the request.
+    /// - Returns: The `GetRequest`.
     func get<T: Encodable>(url: String, parameters: T, resultHandler: NetworkRequestResultHandler?) throws -> GetRequestProtocol
 }
 

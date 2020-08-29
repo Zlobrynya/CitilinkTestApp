@@ -9,24 +9,24 @@
 import Foundation
 
 protocol TaskNetworkClientResultHandler: AnyObject {
-    ///  <#Description#>
+    /// Called when the task was fetched failed.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter debtors: Any error that occurred when trying to get task.
     func taskRequestDidFailed(_ error: Error)
 
-    ///  <#Description#>
+    /// Called when the task was received successfully.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter task: Task's id.
     func taskRequestDidSucceed(_ task: String)
 }
 
 protocol TaskNetworkClientProtocol: NetworkRequestResultHandler {
-    ///  <#Description#>
+    /// Fetches task from the server.
     ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// - Parameter lastName: Debtor's last name.
+    /// - Parameter firstName: Debtor's first name.
+    /// - Parameter secondName: Debtor's second name.
+    /// - Parameter birthday: Debtor's birthday.
     func fetchTask(
         forFirstName firstName: String,
         withLastName lastName: String,
@@ -34,10 +34,7 @@ protocol TaskNetworkClientProtocol: NetworkRequestResultHandler {
         andBirthday birthday: String
     )
 
-    ///  <#Description#>
-    ///
-    /// - Parameter <#Name Parameter#>: <#Parameter Description#>
-    /// - Returns: <#Returns Description#>
+    /// The object that acts as the result handler for fetching task.
     var resultHandler: TaskNetworkClientResultHandler? { get set }
 }
 
