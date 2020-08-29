@@ -1,0 +1,48 @@
+/* 
+  Localization.strings
+  CitilinkTestApp
+
+  Created by Nikitin Nikita on 27.08.2020.
+  Copyright © 2020 Nikita Nikitin. All rights reserved.
+*/
+
+// MARK: - Input Data View
+
+"lastName" = "Фамилия";
+"firstName" = "Имя";
+"secondaryName" = "Отчество";
+"lastNamePlaceholder" = "Введите фамилию.";
+"firstNamePlaceholder" = "Введите имя.";
+"secondaryNamePlaceholder" = "Введите отчество.";
+"lastNameError" = "Неверная фамилия.";
+"firstNameError" = "Неверное имя.";
+"secondaryNameError" = "Неверное отчество.";
+
+"birthdate" = "Дата рождение.";
+"birthdatePlaceholder" = "Выберите дату рождения.";
+
+"debtorsNotFound" = "Задолжностей ненайдено.";
+
+// MARK: - Debtor Information View
+
+"debtorName" = "Имя должника:";
+"debtorProduction" = "Приказ:";
+"debtorDetails" = "Детали приказа:";
+"debtorSubject" = "Описание задолженности:";
+"debtorDepartment" = "Отдел:";
+"debtorBailiff" = "Контакты:";
+
+// MARK: - General
+
+"back" = "Назад";
+"find" = "Найти";
+
+// MARK: - Error
+
+"somethingWrong" = "Что то пошло не так.";
+
+// MARK: - Settings
+
+"onlyCyrillic" = "Проверка на кириллицу";
+"requiredFieldBirthday" = "Поле даты рождения обязательно.";
+

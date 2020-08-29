@@ -32,6 +32,10 @@ extension LocalizedStringProviderProtocol {
     var firstNamePlaceholder: String {
         NSLocalizedString("firstNamePlaceholder", bundle: .main, comment: "")
     }
+    
+    var secondaryNamePlaceholder: String {
+        NSLocalizedString("secondaryNamePlaceholder", bundle: .main, comment: "")
+    }
 
     var lastNameError: String {
         NSLocalizedString("lastNameError", bundle: .main, comment: "")
@@ -51,10 +55,6 @@ extension LocalizedStringProviderProtocol {
 
     var birthdatePlaceholder: String {
         NSLocalizedString("birthdatePlaceholder", bundle: .main, comment: "")
-    }
-
-    var selectBirthdate: String {
-        NSLocalizedString("selectBirthdate", bundle: .main, comment: "")
     }
 
     // MARK: - Debtor's informations.
@@ -96,19 +96,20 @@ extension LocalizedStringProviderProtocol {
     var find: String {
         NSLocalizedString("find", bundle: .main, comment: "")
     }
-
-    var error: String {
-        NSLocalizedString("error", bundle: .main, comment: "")
-    }
-
-    var information: String {
-        NSLocalizedString("information", bundle: .main, comment: "")
-    }
-
     // MARK: - Error
 
     var somethingWrong: String {
         NSLocalizedString("somethingWrong", bundle: .main, comment: "")
+    }
+    
+    // MARK: - Settings
+
+    var onlyCyrillic: String {
+        NSLocalizedString("onlyCyrillic", bundle: .main, comment: "")
+    }
+    
+    var requiredFieldBirthday: String {
+        NSLocalizedString("requiredFieldBirthday", bundle: .main, comment: "")
     }
 }
 

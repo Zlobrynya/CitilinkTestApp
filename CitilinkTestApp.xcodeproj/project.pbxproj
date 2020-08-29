@@ -169,6 +169,8 @@
 		52E5E88424FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDebtorsNetworkClientResultHandler.swift; sourceTree = "<group>"; };
 		52E5E88724FAD238007EEDFB /* StatusNetworkClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNetworkClientTest.swift; sourceTree = "<group>"; };
 		52E5E88924FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatusNetworkClientResultHandler.swift; sourceTree = "<group>"; };
+		52E5E88B24FAD9E9007EEDFB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		52E5E88C24FAD9E9007EEDFB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52F6079724FAA75300E3E7EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		52F6079C24FAA8B600E3E7EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 524CE75824F7E49C00BC0DB1;
 			productRefGroup = 524CE76224F7E49C00BC0DB1 /* Products */;
@@ -773,6 +776,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				524CE77024F7E4A000BC0DB1 /* Base */,
+				52E5E88B24FAD9E9007EEDFB /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -781,6 +785,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5256A70224F80940002E1BDA /* en */,
+				52E5E88C24FAD9E9007EEDFB /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -792,6 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -852,6 +858,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

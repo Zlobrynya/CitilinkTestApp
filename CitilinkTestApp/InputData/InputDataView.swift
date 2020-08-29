@@ -30,7 +30,7 @@ struct InputDataView: View {
             TextFieldWithError(
                 text: $viewModel.secondName,
                 title: stringProvider.secondaryName,
-                placeholder: stringProvider.firstNamePlaceholder,
+                placeholder: stringProvider.secondaryNamePlaceholder,
                 errorMessage: stringProvider.secondaryNameError,
                 isError: viewModel.checkName(viewModel.secondName)
             )

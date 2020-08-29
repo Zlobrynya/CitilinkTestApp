@@ -20,7 +20,6 @@
 
 "birthdate" = "Birthdate";
 "birthdatePlaceholder" = "Select birthdate";
-"selectBirthdate" = "Select birthdate";
 
 "debtorsNotFound" = "Debtors didn't fount.";
 
@@ -31,15 +30,19 @@
 "debtorDetails" = "Production's details:";
 "debtorSubject" = "Production's subject:";
 "debtorDepartment" = "Department:";
-"debtorBailiff" = "Contests:";
+"debtorBailiff" = "Contacts:";
 
 // MARK: - General
 
 "back" = "Back";
 "find" = "Find";
-"information" = "Information";
-"error" = "Error";
 
 // MARK: - Error
 
 "somethingWrong" = "Something went wrong.";
+
+// MARK: - Settings
+
+"onlyCyrillic" = "Only Cyrillic characters are allowed.";
+"requiredFieldBirthday" = "The birthday field is required.";
+

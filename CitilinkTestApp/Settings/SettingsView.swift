@@ -32,12 +32,12 @@ struct SettingsView: View {
             Form {
                 Section {
                     Toggle(isOn: $viewModel.isOnlyCyrillic) {
-                        Text("OnlyCyrillic")
+                        Text(stringProvider.onlyCyrillic)
                     }
                 }
                 Section {
                     Toggle(isOn: $viewModel.isRequiredFieldBirthdayKey) {
-                        Text("RequiredFieldBirthday")
+                        Text(stringProvider.requiredFieldBirthday)
                     }
                 }
             }
