@@ -22,6 +22,8 @@
 "birthdatePlaceholder" = "Select birthdate";
 "selectBirthdate" = "Select birthdate";
 
+"debtorsNotFound" = "Debtors didn't fount.";
+
 // MARK: - Debtor Information View
 
 "debtorName" = "Debtor's name:";
@@ -35,3 +37,9 @@
 
 "back" = "Back";
 "next" = "Next";
+"information" = "Information";
+"error" = "Error";
+
+// MARK: - Error
+
+"somethingWrong" = "Something went wrong.";

@@ -14,6 +14,7 @@ extension String {
     /// - Parameter onlyCyrillic: Flag for checking only Cyrillic.
     /// - Returns: Test result.
     func invalidedName(onlyCyrillic: Bool) -> Bool {
+        guard !self.isEmpty else { return false }
         let urlRegEx = onlyCyrillic ? "^[а-яА-ЯёЁ]{1,20}$" : "^[а-яА-ЯёЁa-zA-Z]{1,25}$"
         return (range(of: urlRegEx, options: .regularExpression) != nil)
     }

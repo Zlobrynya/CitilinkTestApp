@@ -18,43 +18,46 @@ struct InputDataView: View {
                 title: stringProvider.lastName,
                 placeholder: stringProvider.lastNamePlaceholder,
                 errorMessage: stringProvider.lastNameError,
-                isError: $viewModel.errorLastName
+                isError: viewModel.checkName(viewModel.lastName)
             )
             TextFieldWithError(
                 text: $viewModel.firstName,
                 title: stringProvider.firstName,
                 placeholder: stringProvider.firstNamePlaceholder,
                 errorMessage: stringProvider.firstNameError,
-                isError: $viewModel.errorFirstName
+                isError: viewModel.checkName(viewModel.firstName)
             )
             TextFieldWithError(
                 text: $viewModel.secondName,
                 title: stringProvider.secondaryName,
                 placeholder: stringProvider.firstNamePlaceholder,
                 errorMessage: stringProvider.secondaryNameError,
-                isError: $viewModel.errorSecondName
+                isError: viewModel.checkName(viewModel.secondName)
             )
             BirthdayText(birthDate: $viewModel.birthDate, withDate: $viewModel.withDate)
+            button
         }
     }
 
     var button: some View {
-        guard !shouldShowDatePicker else { return AnyView(EmptyView()) }
-        return AnyView(VStack {
-            Spacer()
-            ButtonNext(isEnabled: viewModel.isEnabled, isLoading: $viewModel.isLoading) {
+        guard viewModel.isEnabled else { return AnyView(EmptyView()) }
+        return AnyView(
+            ButtonNext(isLoading: $viewModel.isLoading) {
                 self.viewModel.fetchData()
             }
-        })
+        )
     }
 
     // MARK: - External Dependencies
 
     @EnvironmentObject private var stringProvider: LocalizedStringProvider
     @ObservedObject var viewModel: InputDataViewModel
-    @State private var birthDate = Date()
-    @State var shouldShowDatePicker = false
+    
+    // MARK: - Private Properties
+
     @State var isKeyboardShow = false
+    @State var shoudlShowSettings = false
+
 
     // MARK: - Body
 
@@ -67,9 +70,8 @@ struct InputDataView: View {
                     label: { EmptyView() }
                 )
                 textFields
-                button
             }
-            .allowsHitTesting(isKeyboardShow)
+            .allowsHitTesting(isKeyboardShow || viewModel.isLoading)
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }
@@ -79,6 +81,10 @@ struct InputDataView: View {
                 perform: updateKeyboardHeight
             )
             .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {}, label: { Image(systemName: "wrench") }))
+            .alert(isPresented: $viewModel.shouldShowAlert) {
+                Alert(title: Text(viewModel.alertMessage))
+            }
         }
     }
 

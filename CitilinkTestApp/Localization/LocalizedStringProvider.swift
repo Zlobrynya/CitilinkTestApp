@@ -11,7 +11,6 @@ import Foundation
 protocol LocalizedStringProviderProtocol {}
 
 extension LocalizedStringProviderProtocol {
-    
     // MARK: - Input Data View
 
     var lastName: String {
@@ -45,55 +44,72 @@ extension LocalizedStringProviderProtocol {
     var secondaryNameError: String {
         NSLocalizedString("secondaryNameError", bundle: .main, comment: "")
     }
-    
+
     var birthdate: String {
         NSLocalizedString("birthdate", bundle: .main, comment: "")
     }
-    
+
     var birthdatePlaceholder: String {
         NSLocalizedString("birthdatePlaceholder", bundle: .main, comment: "")
     }
-    
+
     var selectBirthdate: String {
         NSLocalizedString("selectBirthdate", bundle: .main, comment: "")
     }
-    
+
     // MARK: - Debtor's informations.
-    
+
     var debtorProduction: String {
         NSLocalizedString("debtorProduction", bundle: .main, comment: "")
     }
-    
+
     var debtorName: String {
         NSLocalizedString("debtorName", bundle: .main, comment: "")
     }
-    
+
     var debtorDetails: String {
         NSLocalizedString("debtorDetails", bundle: .main, comment: "")
     }
-    
+
     var debtorSubject: String {
         NSLocalizedString("debtorSubject", bundle: .main, comment: "")
     }
-    
+
     var debtorDepartment: String {
         NSLocalizedString("debtorDepartment", bundle: .main, comment: "")
     }
-    
+
     var debtorBailiff: String {
         NSLocalizedString("debtorBailiff", bundle: .main, comment: "")
     }
 
+    var debtorsNotFound: String {
+        NSLocalizedString("debtorsNotFound", bundle: .main, comment: "")
+    }
+
     // MARK: - General.
-    
+
     var back: String {
         NSLocalizedString("back", bundle: .main, comment: "")
     }
-    
+
     var next: String {
         NSLocalizedString("next", bundle: .main, comment: "")
     }
 
+    var error: String {
+        NSLocalizedString("error", bundle: .main, comment: "")
+    }
+
+    var information: String {
+        NSLocalizedString("information", bundle: .main, comment: "")
+    }
+
+    // MARK: - Error
+
+    var somethingWrong: String {
+        NSLocalizedString("somethingWrong", bundle: .main, comment: "")
+    }
 }
 
 public class LocalizedStringProvider: LocalizedStringProviderProtocol, ObservableObject {

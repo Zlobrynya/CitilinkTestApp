@@ -102,6 +102,7 @@ final class TaskNetworkClient: TaskNetworkClientProtocol {
 
     public func requestDidFail(with error: NetworkError) {
         print(error)
+        resultHandler?.taskRequestDidFailed(error)
     }
 
     // MARK: - Private Functions

@@ -22,7 +22,7 @@ struct TextFieldWithError: View {
     var title: String
     var placeholder: String
     var errorMessage: String
-    @Binding var isError: Bool
+    var isError: Bool
     var isActive: Bool = false
 
     // MARK: - Body
@@ -37,7 +37,7 @@ struct TextFieldWithError: View {
 
 struct TextFieldWithError_Previews: PreviewProvider {
     @State static var text: String = ""
-    @State static var error: Bool = false
+    static var error: Bool = false
 
     static var previews: some View {
         TextFieldWithError(
@@ -45,7 +45,7 @@ struct TextFieldWithError_Previews: PreviewProvider {
             title: "Name",
             placeholder: "Placeholder",
             errorMessage: "errorMessage",
-            isError: $error
+            isError: error
         )
     }
 }

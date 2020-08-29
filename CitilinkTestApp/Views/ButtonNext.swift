@@ -12,43 +12,25 @@ struct ButtonNext: View {
     // MARK: - External Dependencies
 
     @EnvironmentObject private var stringProvider: LocalizedStringProvider
-    var isEnabled: Bool
     @Binding var isLoading: Bool
     var action: () -> Void
 
     // MARK: - Body
 
     var body: some View {
-        Button(
-            action: {
-                self.action()
-            },
-            label: {
-                if !isLoading {
-                    Text("Next")
-                        .padding([.vertical], 16)
-                        .padding([.horizontal], 24)
-                        .background(isEnabled ? Color.gray : Color.green)
-                        .cornerRadius(15)
-                } else {
-                    ActivityIndicator(isAnimating: $isLoading, style: .medium, color: .white)
-                        .padding([.vertical], 16)
-                        .padding([.horizontal], 24)
-                        .background(isEnabled ? Color.gray : Color.green)
-                        .cornerRadius(15)
-                }
-
-            }
-        )
-        .foregroundColor(.white)
+        if !isLoading {
+            return AnyView(Button(action: { self.action() }, label: { Text(stringProvider.next) }))
+        } else {
+            return AnyView(ActivityIndicator(isAnimating: $isLoading, style: .medium, color: .black))
+        }
     }
 }
 
 struct ButtonNext_Previews: PreviewProvider {
-    @State static var isLoading: Bool = true
+    @State static var isLoading: Bool = false
 
     static var previews: some View {
-        ButtonNext(isEnabled: false, isLoading: $isLoading) {}
+        ButtonNext(isLoading: $isLoading) {}
             .environmentObject(LocalizedStringProvider())
     }
 }
