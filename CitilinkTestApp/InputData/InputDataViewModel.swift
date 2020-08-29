@@ -16,11 +16,13 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     @Published var secondName = "" { didSet { checkEnabled() } }
 
     @Published var birthDate = Date()
+    @Published var isWithDate = false { didSet { checkEnabled() } }
 
     @Published var isLoading = false
     @Published var isEnabled = false
+
     @Published var shouldPresentDebtor = false
-    @Published var withDate = false
+    @Published var shouldShowSettings = false { didSet { checkEnabled() } }
 
     @Published var shouldShowAlert = false
     @Published var alertMessage = "" { didSet { shouldShowAlert = true } }
@@ -32,18 +34,22 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     private let dateFormatter: DateFormatter
     private let debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol
     private let stringProvider: LocalizedStringProviderProtocol
+    private let settings: SettingsProtocol
 
     // MARK: - Lifecycle
 
     init(
         dateFormatter: DateFormatter = DateFormatter(),
         debtorsDataNetworkClient: DebtorsDataNetworkClientProtocol = DebtorsDataNetworkClient(),
-        stringProvider: LocalizedStringProviderProtocol = LocalizedStringProvider()
+        stringProvider: LocalizedStringProviderProtocol = LocalizedStringProvider(),
+        settings: SettingsProtocol = Settings()
     ) {
         dateFormatter.dateFormat = "dd.MM.YYYY"
         self.dateFormatter = dateFormatter
         self.debtorsDataNetworkClient = debtorsDataNetworkClient
         self.stringProvider = stringProvider
+        self.settings = settings
+
         self.debtorsDataNetworkClient.resultHandler = self
     }
 
@@ -55,13 +61,13 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
             forFirstName: firstName,
             withLastName: lastName,
             andSecondaryName: secondName,
-            andBirthday: withDate ? dateFormatter.string(from: birthDate) : ""
+            andBirthday: isWithDate ? dateFormatter.string(from: birthDate) : ""
         )
     }
-    
+
     func checkName(_ name: String) -> Bool {
         guard !name.isEmpty else { return false }
-        return !name.invalidedName(onlyCyrillic: true)
+        return !name.invalidedName(onlyCyrillic: settings.isOnlyCyrillic)
     }
 
     // MARK: - DebtorsDataNetworkResultHandler Conformance
@@ -85,12 +91,17 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
             }
         }
     }
-    
+
     // MARK: - Private Functions
 
     private func checkEnabled() {
-        isEnabled = lastName.invalidedName(onlyCyrillic: true) &&
-            firstName.invalidedName(onlyCyrillic: true) &&
-            secondName.invalidedName(onlyCyrillic: true)
+        let checkNames = lastName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
+            firstName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
+            secondName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic)
+        if settings.isRequiredFieldBirthday {
+            isEnabled = checkNames && isWithDate
+        } else {
+            isEnabled = checkNames
+        }
     }
 }

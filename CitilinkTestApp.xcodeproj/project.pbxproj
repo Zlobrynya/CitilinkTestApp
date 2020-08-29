@@ -56,6 +56,10 @@
 		52D2C0DD24F98ECD00A80609 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0DC24F98ECD00A80609 /* Log.swift */; };
 		52D2C0DF24F992ED00A80609 /* DebtorsNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0DE24F992ED00A80609 /* DebtorsNetworkClient.swift */; };
 		52D2C0E124F993B200A80609 /* DebtorsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D2C0E024F993B200A80609 /* DebtorsParameters.swift */; };
+		52F6079824FAA75300E3E7EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079724FAA75300E3E7EE /* SettingsView.swift */; };
+		52F6079A24FAA77800E3E7EE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */; };
+		52F6079D24FAA8B600E3E7EE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079C24FAA8B600E3E7EE /* Settings.swift */; };
+		52F607A024FAA92B00E3E7EE /* SettingsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079F24FAA92B00E3E7EE /* SettingsKeys.swift */; };
 		52F941D824F99B4000131B5F /* StatusNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941D724F99B4000131B5F /* StatusNetworkClient.swift */; };
 		52F941DA24F99C2400131B5F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941D924F99C2400131B5F /* Status.swift */; };
 		52F941DC24F99C6E00131B5F /* TaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F941DB24F99C6E00131B5F /* TaskStatus.swift */; };
@@ -127,6 +131,10 @@
 		52D2C0DC24F98ECD00A80609 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		52D2C0DE24F992ED00A80609 /* DebtorsNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsNetworkClient.swift; sourceTree = "<group>"; };
 		52D2C0E024F993B200A80609 /* DebtorsParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsParameters.swift; sourceTree = "<group>"; };
+		52F6079724FAA75300E3E7EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		52F6079C24FAA8B600E3E7EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		52F6079F24FAA92B00E3E7EE /* SettingsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsKeys.swift; sourceTree = "<group>"; };
 		52F941D724F99B4000131B5F /* StatusNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNetworkClient.swift; sourceTree = "<group>"; };
 		52F941D924F99C2400131B5F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		52F941DB24F99C6E00131B5F /* TaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatus.swift; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			children = (
 				525E60DD24F9044500B2565E /* DIContainer.swift */,
 				525E60D324F8FF9200B2565E /* Service */,
+				52F6079B24FAA85B00E3E7EE /* UserDefaults */,
 				525E60D024F8FE8A00B2565E /* ApiKeys */,
 				525E60CF24F8FE8200B2565E /* Endpoints */,
 				5256A6FE24F8091E002E1BDA /* Localization */,
@@ -195,6 +204,7 @@
 				5256A6F024F7F9B7002E1BDA /* InputData */,
 				5256A71424F8351C002E1BDA /* ListDebtor */,
 				523F837424F841BF004BB760 /* InfoDebtor */,
+				52F6079624FAA73A00E3E7EE /* Settings */,
 				5256A71824F83570002E1BDA /* TestData */,
 				524CE76424F7E49C00BC0DB1 /* AppDelegate.swift */,
 				524CE76624F7E49C00BC0DB1 /* SceneDelegate.swift */,
@@ -376,6 +386,32 @@
 			path = Parameters;
 			sourceTree = "<group>";
 		};
+		52F6079624FAA73A00E3E7EE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				52F6079724FAA75300E3E7EE /* SettingsView.swift */,
+				52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		52F6079B24FAA85B00E3E7EE /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				52F6079E24FAA91E00E3E7EE /* Settings */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		52F6079E24FAA91E00E3E7EE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				52F6079C24FAA8B600E3E7EE /* Settings.swift */,
+				52F6079F24FAA92B00E3E7EE /* SettingsKeys.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,11 +519,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				525E60E224F905DD00B2565E /* InputDataConstants.swift in Sources */,
+				52F6079824FAA75300E3E7EE /* SettingsView.swift in Sources */,
 				5256A71624F8355F002E1BDA /* ListDebtorView.swift in Sources */,
 				52D2C0DD24F98ECD00A80609 /* Log.swift in Sources */,
 				5256A70524F80A33002E1BDA /* LocalizedStringProvider.swift in Sources */,
 				524CE76524F7E49C00BC0DB1 /* AppDelegate.swift in Sources */,
 				5256A70724F80FB7002E1BDA /* String.swift in Sources */,
+				52F607A024FAA92B00E3E7EE /* SettingsKeys.swift in Sources */,
 				5256A6F524F7FAF6002E1BDA /* TextFieldWithErrorAndTitle.swift in Sources */,
 				52F941DA24F99C2400131B5F /* Status.swift in Sources */,
 				5256A6F724F7FC8F002E1BDA /* TextFieldView.swift in Sources */,
@@ -501,6 +539,7 @@
 				525E60D724F902D500B2565E /* ApiKeys.swift in Sources */,
 				525E60D524F8FFA000B2565E /* Deobfuscation.swift in Sources */,
 				52F941E024F9B01400131B5F /* UIApplication.swift in Sources */,
+				52F6079A24FAA77800E3E7EE /* SettingsViewModel.swift in Sources */,
 				523F837624F841CF004BB760 /* InfoDebtorView.swift in Sources */,
 				524CE79624F7EE8400BC0DB1 /* NetworkResult.swift in Sources */,
 				525E60E024F904AB00B2565E /* Plist.swift in Sources */,
@@ -522,6 +561,7 @@
 				5256A71F24F83715002E1BDA /* MockListDebtorViewModel.swift in Sources */,
 				52D2C0DF24F992ED00A80609 /* DebtorsNetworkClient.swift in Sources */,
 				5256A70C24F82C27002E1BDA /* ButtonNext.swift in Sources */,
+				52F6079D24FAA8B600E3E7EE /* Settings.swift in Sources */,
 				5256A6FD24F7FF2A002E1BDA /* InputDataViewModel.swift in Sources */,
 				525E60DE24F9044500B2565E /* DIContainer.swift in Sources */,
 				524CE79124F7ED5500BC0DB1 /* HTTPStatusCode.swift in Sources */,

@@ -34,7 +34,7 @@ struct InputDataView: View {
                 errorMessage: stringProvider.secondaryNameError,
                 isError: viewModel.checkName(viewModel.secondName)
             )
-            BirthdayText(birthDate: $viewModel.birthDate, withDate: $viewModel.withDate)
+            BirthdayText(birthDate: $viewModel.birthDate, withDate: $viewModel.isWithDate)
             button
         }
     }
@@ -52,12 +52,10 @@ struct InputDataView: View {
 
     @EnvironmentObject private var stringProvider: LocalizedStringProvider
     @ObservedObject var viewModel: InputDataViewModel
-    
+
     // MARK: - Private Properties
 
     @State var isKeyboardShow = false
-    @State var shoudlShowSettings = false
-
 
     // MARK: - Body
 
@@ -81,9 +79,18 @@ struct InputDataView: View {
                 perform: updateKeyboardHeight
             )
             .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {}, label: { Image(systemName: "wrench") }))
+            .navigationBarItems(trailing:
+                Button(
+                    action: { self.viewModel.shouldShowSettings.toggle() },
+                    label: { Image(systemName: "wrench") }
+                )
+            )
             .alert(isPresented: $viewModel.shouldShowAlert) {
                 Alert(title: Text(viewModel.alertMessage))
+            }
+            .sheet(isPresented: $viewModel.shouldShowSettings) {
+                SettingsView(viewModel: SettingsViewModel(), shouldOpenSettings: self.$viewModel.shouldShowSettings)
+                    .environmentObject(LocalizedStringProvider())
             }
         }
     }
