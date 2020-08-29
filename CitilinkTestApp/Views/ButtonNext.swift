@@ -19,7 +19,7 @@ struct ButtonNext: View {
 
     var body: some View {
         if !isLoading {
-            return AnyView(Button(action: { self.action() }, label: { Text(stringProvider.next) }))
+            return AnyView(Button(action: { self.action() }, label: { Text(stringProvider.find) }))
         } else {
             return AnyView(ActivityIndicator(isAnimating: $isLoading, style: .medium, color: .black))
         }

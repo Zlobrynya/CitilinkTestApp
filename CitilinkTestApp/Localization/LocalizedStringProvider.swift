@@ -93,8 +93,8 @@ extension LocalizedStringProviderProtocol {
         NSLocalizedString("back", bundle: .main, comment: "")
     }
 
-    var next: String {
-        NSLocalizedString("next", bundle: .main, comment: "")
+    var find: String {
+        NSLocalizedString("find", bundle: .main, comment: "")
     }
 
     var error: String {

@@ -9,6 +9,7 @@
 import SwiftUI
 
 final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandler {
+    
     // MARK: - Public Properties
 
     @Published var firstName = "" { didSet { checkEnabled() } }
@@ -92,15 +93,14 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     // MARK: - DebtorsDataNetworkResultHandler Conformance
 
     func debtorsDataRequestDidFailed(_ error: Error) {
-        DispatchQueue.main.async {
+        executeOnMainQueue {
             self.isLoading = false
             self.alertMessage = self.stringProvider.somethingWrong
         }
-        Log.error(error)
     }
 
     func debtorsDataRequestDidSucceed(_ debtors: [Debtor]) {
-        DispatchQueue.main.async {
+        executeOnMainQueue {
             self.isLoading = false
             self.debtors = debtors
             if self.debtors.isEmpty {
@@ -117,6 +117,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
         let checkNames = lastName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
             firstName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
             secondName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic)
+        
         if settings.isRequiredFieldBirthday {
             isEnabled = checkNames && isWithDate
         } else {
