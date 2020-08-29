@@ -42,8 +42,9 @@ class GetRequest: GetRequestProtocol {
     ) throws {
         session = urlSession
         guard var components = URLComponents(string: url) else { throw NetworkError.invalidUrl }
-        components.queryItems = try! parameters.asURLQueryItem(jsonEncoder: jsonEncoder)
-        urlRequest = URLRequest(url: components.url!)
+        components.queryItems = try parameters.asURLQueryItem(jsonEncoder: jsonEncoder)
+        guard let url = components.url else { throw NetworkError.invalidUrl }
+        urlRequest = URLRequest(url: url)
         urlRequest?.httpMethod = "GET"
         self.resultHandler = resultHandler
     }
