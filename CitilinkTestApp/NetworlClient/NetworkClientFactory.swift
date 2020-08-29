@@ -13,7 +13,7 @@ protocol NetworkClientFactoryProtocol {
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
     /// - Returns: <#Returns Description#>
-    func get<T: Encodable>(url: String, parameters: T, resultHandler: NetworkRequestResultHandler?) throws -> GetRequest
+    func get<T: Encodable>(url: String, parameters: T, resultHandler: NetworkRequestResultHandler?) throws -> GetRequestProtocol
 }
 
 struct NetworkClientFactory: NetworkClientFactoryProtocol {
@@ -31,7 +31,7 @@ struct NetworkClientFactory: NetworkClientFactoryProtocol {
 
     // MARK: - Public Functions
 
-    func get<T: Encodable>(url: String, parameters: T, resultHandler: NetworkRequestResultHandler?) throws -> GetRequest {
+    func get<T: Encodable>(url: String, parameters: T, resultHandler: NetworkRequestResultHandler?) throws -> GetRequestProtocol {
         try GetRequest(
             url: url,
             parameters: parameters,

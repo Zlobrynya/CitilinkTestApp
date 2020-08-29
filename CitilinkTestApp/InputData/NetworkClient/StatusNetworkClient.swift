@@ -75,7 +75,7 @@ final class StatusNetworkClient: StatusNetworkClientProtocol {
             )
             request.send()
         } catch {
-            Log.error(error)
+            resultHandler?.statusRequestDidFailed(error)
         }
     }
     

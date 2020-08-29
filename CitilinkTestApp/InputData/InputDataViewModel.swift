@@ -87,7 +87,7 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
 
     func checkName(_ name: String) -> Bool {
         guard !name.isEmpty else { return false }
-        return !name.invalidedName(onlyCyrillic: settings.isOnlyCyrillic)
+        return !name.validateName(onlyCyrillic: settings.isOnlyCyrillic)
     }
 
     // MARK: - DebtorsDataNetworkResultHandler Conformance
@@ -114,9 +114,9 @@ final class InputDataViewModel: ObservableObject, DebtorsDataNetworkResultHandle
     // MARK: - Private Functions
 
     private func checkEnabled() {
-        let checkNames = lastName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
-            firstName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic) &&
-            secondName.invalidedName(onlyCyrillic: settings.isOnlyCyrillic)
+        let checkNames = lastName.validateName(onlyCyrillic: settings.isOnlyCyrillic) &&
+            firstName.validateName(onlyCyrillic: settings.isOnlyCyrillic) &&
+            secondName.validateName(onlyCyrillic: settings.isOnlyCyrillic)
         
         if settings.isRequiredFieldBirthday {
             isEnabled = checkNames && isWithDate

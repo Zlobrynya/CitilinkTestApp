@@ -59,6 +59,24 @@
 		52E5E85624FAB423007EEDFB /* LastSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85524FAB423007EEDFB /* LastSearch.swift */; };
 		52E5E85824FAB42D007EEDFB /* LastSearchKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85724FAB42D007EEDFB /* LastSearchKeys.swift */; };
 		52E5E85A24FAB923007EEDFB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85924FAB923007EEDFB /* Tools.swift */; };
+		52E5E85F24FAB9EC007EEDFB /* DeobfuscationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E85E24FAB9EC007EEDFB /* DeobfuscationTest.swift */; };
+		52E5E86224FABC13007EEDFB /* LastSearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E86124FABC13007EEDFB /* LastSearchTest.swift */; };
+		52E5E86424FABC22007EEDFB /* SettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E86324FABC22007EEDFB /* SettingsTest.swift */; };
+		52E5E86724FAC0E0007EEDFB /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E86624FAC0E0007EEDFB /* StringTest.swift */; };
+		52E5E86D24FAC76D007EEDFB /* MockDebtors.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E5E86A24FAC76D007EEDFB /* MockDebtors.json */; };
+		52E5E86E24FAC76D007EEDFB /* MockGet.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E5E86B24FAC76D007EEDFB /* MockGet.json */; };
+		52E5E86F24FAC76D007EEDFB /* MockStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E5E86C24FAC76D007EEDFB /* MockStatus.json */; };
+		52E5E87124FAC77C007EEDFB /* MainResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87024FAC77C007EEDFB /* MainResponseTest.swift */; };
+		52E5E87324FAC8FD007EEDFB /* TaskMainResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87224FAC8FD007EEDFB /* TaskMainResponseTest.swift */; };
+		52E5E87524FAC97E007EEDFB /* StatusMainResponseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87424FAC97E007EEDFB /* StatusMainResponseTask.swift */; };
+		52E5E87A24FACA10007EEDFB /* MockNetworkClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87924FACA10007EEDFB /* MockNetworkClientFactory.swift */; };
+		52E5E87C24FACA7D007EEDFB /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87B24FACA7D007EEDFB /* MockRequest.swift */; };
+		52E5E87E24FACBA0007EEDFB /* TaskNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87D24FACBA0007EEDFB /* TaskNetworkClientTest.swift */; };
+		52E5E88024FACBC4007EEDFB /* MockTaskNetworkClientResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E87F24FACBC4007EEDFB /* MockTaskNetworkClientResultHandler.swift */; };
+		52E5E88324FAD01C007EEDFB /* DebtorsNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E88224FAD01C007EEDFB /* DebtorsNetworkClientTest.swift */; };
+		52E5E88524FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E88424FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift */; };
+		52E5E88824FAD238007EEDFB /* StatusNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E88724FAD238007EEDFB /* StatusNetworkClientTest.swift */; };
+		52E5E88A24FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E88924FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift */; };
 		52F6079824FAA75300E3E7EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079724FAA75300E3E7EE /* SettingsView.swift */; };
 		52F6079A24FAA77800E3E7EE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */; };
 		52F6079D24FAA8B600E3E7EE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6079C24FAA8B600E3E7EE /* Settings.swift */; };
@@ -137,6 +155,24 @@
 		52E5E85524FAB423007EEDFB /* LastSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearch.swift; sourceTree = "<group>"; };
 		52E5E85724FAB42D007EEDFB /* LastSearchKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchKeys.swift; sourceTree = "<group>"; };
 		52E5E85924FAB923007EEDFB /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		52E5E85E24FAB9EC007EEDFB /* DeobfuscationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeobfuscationTest.swift; sourceTree = "<group>"; };
+		52E5E86124FABC13007EEDFB /* LastSearchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchTest.swift; sourceTree = "<group>"; };
+		52E5E86324FABC22007EEDFB /* SettingsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTest.swift; sourceTree = "<group>"; };
+		52E5E86624FAC0E0007EEDFB /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
+		52E5E86A24FAC76D007EEDFB /* MockDebtors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockDebtors.json; sourceTree = "<group>"; };
+		52E5E86B24FAC76D007EEDFB /* MockGet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockGet.json; sourceTree = "<group>"; };
+		52E5E86C24FAC76D007EEDFB /* MockStatus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockStatus.json; sourceTree = "<group>"; };
+		52E5E87024FAC77C007EEDFB /* MainResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponseTest.swift; sourceTree = "<group>"; };
+		52E5E87224FAC8FD007EEDFB /* TaskMainResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMainResponseTest.swift; sourceTree = "<group>"; };
+		52E5E87424FAC97E007EEDFB /* StatusMainResponseTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMainResponseTask.swift; sourceTree = "<group>"; };
+		52E5E87924FACA10007EEDFB /* MockNetworkClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClientFactory.swift; sourceTree = "<group>"; };
+		52E5E87B24FACA7D007EEDFB /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+		52E5E87D24FACBA0007EEDFB /* TaskNetworkClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNetworkClientTest.swift; sourceTree = "<group>"; };
+		52E5E87F24FACBC4007EEDFB /* MockTaskNetworkClientResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTaskNetworkClientResultHandler.swift; sourceTree = "<group>"; };
+		52E5E88224FAD01C007EEDFB /* DebtorsNetworkClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorsNetworkClientTest.swift; sourceTree = "<group>"; };
+		52E5E88424FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDebtorsNetworkClientResultHandler.swift; sourceTree = "<group>"; };
+		52E5E88724FAD238007EEDFB /* StatusNetworkClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNetworkClientTest.swift; sourceTree = "<group>"; };
+		52E5E88924FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatusNetworkClientResultHandler.swift; sourceTree = "<group>"; };
 		52F6079724FAA75300E3E7EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		52F6079924FAA77800E3E7EE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		52F6079C24FAA8B600E3E7EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -234,6 +270,13 @@
 		524CE77A24F7E4A000BC0DB1 /* CitilinkTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				52E5E87624FAC9DF007EEDFB /* NetworkClient */,
+				52E5E86824FAC695007EEDFB /* Models */,
+				52E5E86524FAC0D1007EEDFB /* Extension */,
+				52E5E86024FABC01007EEDFB /* UserDefaults */,
+				52E5E85D24FAB9DA007EEDFB /* Service */,
+				52E5E85C24FAB9CC007EEDFB /* ViewModel */,
+				52E5E85B24FAB9BF007EEDFB /* Mock */,
 				524CE77B24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift */,
 				524CE77D24F7E4A000BC0DB1 /* Info.plist */,
 			);
@@ -402,6 +445,113 @@
 			path = LastSearch;
 			sourceTree = "<group>";
 		};
+		52E5E85B24FAB9BF007EEDFB /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		52E5E85C24FAB9CC007EEDFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52E5E85D24FAB9DA007EEDFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E85E24FAB9EC007EEDFB /* DeobfuscationTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		52E5E86024FABC01007EEDFB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E86124FABC13007EEDFB /* LastSearchTest.swift */,
+				52E5E86324FABC22007EEDFB /* SettingsTest.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		52E5E86524FAC0D1007EEDFB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E86624FAC0E0007EEDFB /* StringTest.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		52E5E86824FAC695007EEDFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E86924FAC69C007EEDFB /* Mock */,
+				52E5E87024FAC77C007EEDFB /* MainResponseTest.swift */,
+				52E5E87224FAC8FD007EEDFB /* TaskMainResponseTest.swift */,
+				52E5E87424FAC97E007EEDFB /* StatusMainResponseTask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E5E86924FAC69C007EEDFB /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E86A24FAC76D007EEDFB /* MockDebtors.json */,
+				52E5E86B24FAC76D007EEDFB /* MockGet.json */,
+				52E5E86C24FAC76D007EEDFB /* MockStatus.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		52E5E87624FAC9DF007EEDFB /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E88624FAD22F007EEDFB /* StatusNetworkClient */,
+				52E5E88124FAD012007EEDFB /* DebtorsNetworkClient */,
+				52E5E87824FAC9EE007EEDFB /* TaskNetworkClient */,
+				52E5E87724FAC9E2007EEDFB /* Mock */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		52E5E87724FAC9E2007EEDFB /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E87924FACA10007EEDFB /* MockNetworkClientFactory.swift */,
+				52E5E87B24FACA7D007EEDFB /* MockRequest.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		52E5E87824FAC9EE007EEDFB /* TaskNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E87D24FACBA0007EEDFB /* TaskNetworkClientTest.swift */,
+				52E5E87F24FACBC4007EEDFB /* MockTaskNetworkClientResultHandler.swift */,
+			);
+			path = TaskNetworkClient;
+			sourceTree = "<group>";
+		};
+		52E5E88124FAD012007EEDFB /* DebtorsNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E88224FAD01C007EEDFB /* DebtorsNetworkClientTest.swift */,
+				52E5E88424FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift */,
+			);
+			path = DebtorsNetworkClient;
+			sourceTree = "<group>";
+		};
+		52E5E88624FAD22F007EEDFB /* StatusNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				52E5E88724FAD238007EEDFB /* StatusNetworkClientTest.swift */,
+				52E5E88924FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift */,
+			);
+			path = StatusNetworkClient;
+			sourceTree = "<group>";
+		};
 		52F6079624FAA73A00E3E7EE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +675,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E5E86F24FAC76D007EEDFB /* MockStatus.json in Resources */,
+				52E5E86E24FAC76D007EEDFB /* MockGet.json in Resources */,
+				52E5E86D24FAC76D007EEDFB /* MockDebtors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +747,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E5E85F24FAB9EC007EEDFB /* DeobfuscationTest.swift in Sources */,
+				52E5E86224FABC13007EEDFB /* LastSearchTest.swift in Sources */,
+				52E5E87524FAC97E007EEDFB /* StatusMainResponseTask.swift in Sources */,
+				52E5E87324FAC8FD007EEDFB /* TaskMainResponseTest.swift in Sources */,
+				52E5E86424FABC22007EEDFB /* SettingsTest.swift in Sources */,
+				52E5E87124FAC77C007EEDFB /* MainResponseTest.swift in Sources */,
+				52E5E88824FAD238007EEDFB /* StatusNetworkClientTest.swift in Sources */,
 				524CE77C24F7E4A000BC0DB1 /* CitilinkTestAppTests.swift in Sources */,
+				52E5E88524FAD03F007EEDFB /* MockDebtorsNetworkClientResultHandler.swift in Sources */,
+				52E5E88A24FAD251007EEDFB /* MockStatusNetworkClientResultHandler.swift in Sources */,
+				52E5E87E24FACBA0007EEDFB /* TaskNetworkClientTest.swift in Sources */,
+				52E5E87C24FACA7D007EEDFB /* MockRequest.swift in Sources */,
+				52E5E86724FAC0E0007EEDFB /* StringTest.swift in Sources */,
+				52E5E88024FACBC4007EEDFB /* MockTaskNetworkClientResultHandler.swift in Sources */,
+				52E5E88324FAD01C007EEDFB /* DebtorsNetworkClientTest.swift in Sources */,
+				52E5E87A24FACA10007EEDFB /* MockNetworkClientFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,8 +34,8 @@ public struct JsonObject<T: Decodable>: JsonObjectProtocol {
 
     // MARK: - Lifecycle
 
-    public init(fileName: String, decoder: JSONDecoder = JSONDecoder()) throws {
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else { throw Error.invalidUrl }
+    public init(fileName: String, decoder: JSONDecoder = JSONDecoder(), bundle: Bundle = .main) throws {
+        guard let url = bundle.url(forResource: fileName, withExtension: "json") else { throw Error.invalidUrl }
         data = try Data(contentsOf: url)
         decodedItem = try decoder.decode(T.self, from: data)
     }

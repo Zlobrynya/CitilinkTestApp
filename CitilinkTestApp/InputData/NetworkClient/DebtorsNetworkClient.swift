@@ -19,7 +19,7 @@ protocol DebtorsNetworkClientResultHandler: AnyObject {
     ///
     /// - Parameter <#Name Parameter#>: <#Parameter Description#>
     /// - Returns: <#Returns Description#>
-    func debtorsRequestDidSucceed(_ task: [Debtor])
+    func debtorsRequestDidSucceed(_ debtors: [Debtor])
 }
 
 protocol DebtorsNetworkClientProtocol: AnyObject {
@@ -61,7 +61,6 @@ final class DebtorsNetworkClient: DebtorsNetworkClientProtocol, NetworkRequestRe
 
     func fetchDebtorsForTask(_ task: String) {
         let parameters = DebtorsParameters(token: constants.token, task: task)
-        Log.debug("task \(task)")
         do {
             let request = try networkClientFactory.get(
                 url: constants.result,
@@ -70,7 +69,7 @@ final class DebtorsNetworkClient: DebtorsNetworkClientProtocol, NetworkRequestRe
             )
             request.send()
         } catch {
-            Log.error(error)
+            resultHandler?.debtorsRequestDidFailed(error)
         }
     }
     
@@ -78,8 +77,6 @@ final class DebtorsNetworkClient: DebtorsNetworkClientProtocol, NetworkRequestRe
 
     public func requestDidSucceed(with result: NetworkResult) {
         do {
-            let str = String(decoding: result.data, as: UTF8.self)
-            Log.debug(str)
             let response = try jsonDecoder.decode(MainResponse.self, from: result.data)
             guard let debtors = response.response.result.first?.result else { throw NetworkError.emptyResponse }
             resultHandler?.debtorsRequestDidSucceed(debtors)

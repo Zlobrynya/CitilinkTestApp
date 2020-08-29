@@ -84,7 +84,7 @@ final class TaskNetworkClient: TaskNetworkClientProtocol {
             )
             request.send()
         } catch {
-            Log.error(error)
+            resultHandler?.taskRequestDidFailed(error)
         }
     }
 

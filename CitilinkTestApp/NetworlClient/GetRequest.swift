@@ -20,7 +20,11 @@ protocol NetworkRequestResultHandler: AnyObject {
     func requestDidFail(with error: NetworkError)
 }
 
-class GetRequest {
+protocol GetRequestProtocol {
+    func send()
+}
+
+class GetRequest: GetRequestProtocol {
     // MARK: - Public Properties
 
     private(set) var urlRequest: URLRequest?
