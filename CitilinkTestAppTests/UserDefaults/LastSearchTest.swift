@@ -27,9 +27,9 @@ class LastSearchTest: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
+        super.setUp()
         userDefaults = UserDefaults.standard
         sut = LastSearch(userDefaults: userDefaults, keys: keys)
-        super.setUp()
     }
     
     override func tearDown() {

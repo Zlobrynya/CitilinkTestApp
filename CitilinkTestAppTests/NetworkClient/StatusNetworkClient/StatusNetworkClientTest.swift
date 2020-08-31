@@ -26,10 +26,10 @@ class StatusNetworkClientTest: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
+        super.setUp()
         mockResultHandler = MockStatusNetworkClientResultHandler()
         sut = StatusNetworkClient(constants: constant, networkClientFactory: mockNetworkClientFactory, jsonDecoder: jsonDecoder)
         sut.resultHandler = mockResultHandler
-        super.setUp()
     }
     
     override func tearDown() {

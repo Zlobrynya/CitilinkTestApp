@@ -18,8 +18,8 @@ class DeobfuscationTest: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
-        sut = Deobfuscation()
         super.setUp()
+        sut = Deobfuscation()
     }
     
     override func tearDown() {

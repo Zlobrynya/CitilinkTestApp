@@ -26,10 +26,10 @@ class TaskNetworkClientTest: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
+        super.setUp()
         mockResultHandler = MockTaskNetworkClientResultHandler()
         sut = TaskNetworkClient(constants: constant, networkClientFactory: mockNetworkClientFactory, jsonDecoder: jsonDecoder)
         sut.resultHandler = mockResultHandler
-        super.setUp()
     }
     
     override func tearDown() {

@@ -27,9 +27,9 @@ class SettingsTest: XCTestCase {
     // MARK: - Lifecycle
     
     override func setUp() {
+        super.setUp()
         userDefaults = UserDefaults.standard
         sut = Settings(userDefaults: userDefaults, keys: keys)
-        super.setUp()
     }
     
     override func tearDown() {
